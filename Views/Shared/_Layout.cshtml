@@ -1,0 +1,83 @@
+﻿@inject SignInManager<IdentityUser> signInManager;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - liveraryIdentity</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/liveraryIdentity.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    @if (!Context.Request.Path.StartsWithSegments("/Account/Login") &&
+        !Context.Request.Path.StartsWithSegments("/Account/Create") &&
+        !Context.Request.Path.StartsWithSegments("/Account/UserList") &&
+        !Context.Request.Path.StartsWithSegments("/Account/ViewDetails") &&
+        !Context.Request.Path.StartsWithSegments("/AdminHome/Index"))
+    {
+        <header>
+            <nav>
+                <div class="header-content">
+                    <div class="logo">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="~/images/logo.png" alt="Logo" width="254" height="72" />
+                        </a>
+                    </div>
+                    <div class="search-bar">
+                        <div class="input-container">
+                            <input type="text" placeholder="Search" />
+                            <button type="submit">
+                                <img src="~/images/search.png" alt="Search" />
+                            </button>
+                        </div>
+                    </div>
+                    @if(User.IsInRole("SuperAdmin"))
+                    {
+                        <div>
+                            <h1>Create Training Category</h1>
+                        </div>
+                        <div>
+                            <h1>Create Training</h1>
+                        </div>
+                    }
+                    <div id="login">
+                        @if (signInManager.IsSignedIn(User))
+                        {
+                            <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-purple">Logout @User.Identity.Name</button>
+                            </form>
+                        } else {
+                            <a asp-area="" asp-controller="Account" asp-action="Login">
+                                Login
+                            </a>
+                        }
+                    </div>
+                </div>
+            </nav>
+        </header>
+    }
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - LiveRary - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

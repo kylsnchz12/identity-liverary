@@ -1,0 +1,32 @@
+<div class="content-wrapper">
+    <div class="left-details-list">
+        <div class="crud-logo" style="background-image: url('/images/crud_logo.png');"></div>
+            <a asp-area="" asp-controller="Account" asp-action="Login">
+                <p class="logout">Logout</p>
+            </a>
+    </div>
+    <div class="right-details">
+        <h1>Admins</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>UserID</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                @* @foreach(var user in Model)
+                {
+                    <tr>
+                        <td>@user.UserID</td>
+                        <td>@user.Username</td>
+                        <td>@user.Password</td>
+                        <td><a href="/Account/View?userID=@user.UserID">View</a></td>
+                    </tr>
+                } *@
+            </tbody>
+        </table>
+    </div>
+</div>
