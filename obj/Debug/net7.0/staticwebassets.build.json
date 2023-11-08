@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SEwA4PniGYAhyeAIogzNIwV7ms6dHisb2TmErosD8Fw=",
+  "Hash": "W3PxAI0B+SCtMRG+ziEHgmaQ2+HxtU1yY+nUCHTLpT4=",
   "Source": "liveraryIdentity",
   "BasePath": "_content/liveraryIdentity",
   "Mode": "Default",
@@ -1309,6 +1309,23 @@
       "OriginalItemSpec": "wwwroot/images/google_bg.png"
     },
     {
+      "Identity": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/home.png",
+      "SourceId": "liveraryIdentity",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/",
+      "BasePath": "_content/liveraryIdentity",
+      "RelativePath": "images/home.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/home.png"
+    },
+    {
       "Identity": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/js_bg.png",
       "SourceId": "liveraryIdentity",
       "SourceType": "Discovered",
@@ -1358,6 +1375,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/logo.png"
+    },
+    {
+      "Identity": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/logout.png",
+      "SourceId": "liveraryIdentity",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/",
+      "BasePath": "_content/liveraryIdentity",
+      "RelativePath": "images/logout.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/logout.png"
     },
     {
       "Identity": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/logoword.png",

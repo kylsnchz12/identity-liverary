@@ -14,8 +14,8 @@
 <body>
     @if (!Context.Request.Path.StartsWithSegments("/Account/Login") &&
         !Context.Request.Path.StartsWithSegments("/Account/Create") &&
-        !Context.Request.Path.StartsWithSegments("/Account/UserList") &&
-        !Context.Request.Path.StartsWithSegments("/Account/ViewDetails") &&
+        !Context.Request.Path.StartsWithSegments("/SuperAdmin/UserList") &&
+        !Context.Request.Path.StartsWithSegments("/SuperAdmin/ViewDetails") &&
         !Context.Request.Path.StartsWithSegments("/AdminHome/Index"))
     {
         <header>
@@ -52,7 +52,7 @@
                         {
                             @if(User.IsInRole("SuperAdmin"))
                             {
-                                <a asp-area="" asp-controller="Account" asp-action="UserList">
+                                <a asp-area="" asp-controller="SuperAdmin" asp-action="UserList">
                                     <button class="btn btn-purple-superadmin">
                                         <img src="~/images/superadmin.png" alt="Profile Icon" /> @User.Identity.Name
                                     </button>

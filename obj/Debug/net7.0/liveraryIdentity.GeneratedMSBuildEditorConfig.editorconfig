@@ -184,14 +184,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Account/UserList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Vc2VyTGlzdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Account/ViewDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9WaWV3RGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/kyle/Desktop/GitHub/identity-liverary/Views/AdminHome/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5Ib21lL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -222,6 +214,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/kyle/Desktop/GitHub/identity-liverary/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/SuperAdmin/UserList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VwZXJBZG1pbi9Vc2VyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/SuperAdmin/ViewDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VwZXJBZG1pbi9WaWV3RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/kyle/Desktop/GitHub/identity-liverary/Views/_ViewImports.cshtml]

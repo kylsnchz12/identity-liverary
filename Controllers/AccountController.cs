@@ -70,16 +70,5 @@ namespace liveraryIdentity.Controllers
             await signInManager.SignOutAsync();
             return RedirectToAction("index", "home");
         }
-
-        [Authorize(Roles = "SuperAdmin")]
-        public IActionResult UserList()
-        {
-            return View();
-        }
-
-        public IActionResult ViewDetails()
-        {
-            return View();
-        }
     }
 }

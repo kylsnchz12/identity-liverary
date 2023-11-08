@@ -61,6 +61,10 @@
       "PackagePath": "staticwebassets/images/google_bg.png"
     },
     {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/home.png",
+      "PackagePath": "staticwebassets/images/home.png"
+    },
+    {
       "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/js_bg.png",
       "PackagePath": "staticwebassets/images/js_bg.png"
     },
@@ -71,6 +75,10 @@
     {
       "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/logo.png",
       "PackagePath": "staticwebassets/images/logo.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/logout.png",
+      "PackagePath": "staticwebassets/images/logout.png"
     },
     {
       "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/logoword.png",

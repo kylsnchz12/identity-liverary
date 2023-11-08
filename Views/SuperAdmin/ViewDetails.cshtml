@@ -1,0 +1,30 @@
+@model EditViewModel
+
+<div class="content-wrapper">
+    <div class='left-details'>
+        <div class="crud-logo" style="background-image: url('/images/crud_logo.png');"></div>
+            <a asp-area="" asp-controller="SuperAdmin" asp-action="UserList">
+                <p class="logout">Back</p>
+            </a>
+    </div>
+    <div class="right-details-view">
+        <h1>Edit User</h1>
+            <form method="post" class="edit-user">
+                <label id="mylabel" asp-for="Id">UserID</label>
+                <input id="myInput" readonly type="text" id="userID" name="userID", asp-for="Id" required>
+        
+                <div class="form-group">
+                    <label id="mylabel" asp-for="Email"></label>
+                    <input asp-for="Email" id="myInput">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            <br>
+            <button id="mybutton-update" type="submit" id="create">Update</button>
+            <br>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
