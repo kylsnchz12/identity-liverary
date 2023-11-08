@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+OB7aHEaz7S4mDcSHZg3qqwpM735uZ4qx9zp4TrhABtNyhoda6co5ei3uVNUYuiRiWvKdkUaYPSnf22Jo3bcKQ==",
+  "dgSpecHash": "WlvHXnIi26av+bdJphHKvfFGzn/OkhQAsK4lRB2fX7ytYEluNF0cb5T+/1VphhL7xBn8NjyhJIdNPYZcyVkB7Q==",
   "success": true,
-  "projectFilePath": "/Users/kyle/Desktop/Code/liveraryIdentity/liveraryIdentity.csproj",
+  "projectFilePath": "/Users/kyle/Desktop/GitHub/identity-liverary/liveraryIdentity.csproj",
   "expectedPackageFiles": [
     "/Users/kyle/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/kyle/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

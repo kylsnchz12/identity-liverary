@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using liveraryIdentity.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace liveraryIdentity.Controllers
 {
@@ -70,6 +71,7 @@ namespace liveraryIdentity.Controllers
             return RedirectToAction("index", "home");
         }
 
+        [Authorize(Roles = "SuperAdmin")]
         public IActionResult UserList()
         {
             return View();

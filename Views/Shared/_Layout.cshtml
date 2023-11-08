@@ -34,22 +34,35 @@
                             </button>
                         </div>
                     </div>
-                    @if(User.IsInRole("SuperAdmin"))
+                    @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
                     {
-                        <div>
-                            <h1>Create Training Category</h1>
+                        <div class="heading-container">
+                            <button class="edit-button-header">
+                                <img src="~/images/add.png" alt="Add Icon" /> Create Training
+                            </button>
                         </div>
-                        <div>
-                            <h1>Create Training</h1>
+                        <div class="heading-container">
+                            <button class="edit-button-header">
+                                <img src="~/images/add.png" alt="Add Icon" /> Create Category
+                            </button>
                         </div>
                     }
                     <div id="login">
                         @if (signInManager.IsSignedIn(User))
                         {
-                            <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
-                                @Html.AntiForgeryToken()
-                                <button type="submit" class="btn btn-purple">Logout @User.Identity.Name</button>
-                            </form>
+                            @if(User.IsInRole("SuperAdmin"))
+                            {
+                                <a asp-area="" asp-controller="Account" asp-action="UserList">
+                                    <button class="btn btn-purple-superadmin">
+                                        <img src="~/images/superadmin.png" alt="Profile Icon" /> @User.Identity.Name
+                                    </button>
+                                </a>
+                            } else {
+                                <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-purple">Logout @User.Identity.Name</button>
+                                </form>
+                            }
                         } else {
                             <a asp-area="" asp-controller="Account" asp-action="Login">
                                 Login

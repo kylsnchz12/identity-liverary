@@ -1,9 +1,17 @@
 <div class="content-wrapper">
     <div class="left-details-list">
         <div class="crud-logo" style="background-image: url('/images/crud_logo.png');"></div>
-            <a asp-area="" asp-controller="Account" asp-action="Login">
-                <p class="logout">Logout</p>
+            <a asp-area="" asp-controller="AdminHome" asp-action="Index">
+                <button class="logout-home">
+                    <img src="~/images/home.png" alt="Home Icon" /> Home
+                </button>
             </a>
+            <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="logout">
+                    <img src="~/images/logout.png" alt="Edit Icon" /> Logout
+                </button>
+            </form>
     </div>
     <div class="right-details">
         <h1>Admins</h1>
