@@ -1,0 +1,58 @@
+﻿@page
+@model liveraryIdentity.Views.Trainings.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Training</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Training.CategoryID" class="control-label"></label>
+                <select asp-for="Training.CategoryID" class ="form-control" asp-items="ViewBag.CategoryID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Training.Title" class="control-label"></label>
+                <input asp-for="Training.Title" class="form-control" />
+                <span asp-validation-for="Training.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Training.Author" class="control-label"></label>
+                <input asp-for="Training.Author" class="form-control" />
+                <span asp-validation-for="Training.Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Training.Description" class="control-label"></label>
+                <input asp-for="Training.Description" class="form-control" />
+                <span asp-validation-for="Training.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Training.DateCreated" class="control-label"></label>
+                <input asp-for="Training.DateCreated" class="form-control" />
+                <span asp-validation-for="Training.DateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Training.Thumbnail" class="control-label"></label>
+                <input asp-for="Training.Thumbnail" class="form-control" />
+                <span asp-validation-for="Training.Thumbnail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
