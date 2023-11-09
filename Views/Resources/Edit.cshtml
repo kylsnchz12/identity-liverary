@@ -1,5 +1,4 @@
-﻿@page
-@model liveraryIdentity.Views.Resources.EditModel
+﻿@model liveraryIdentity.Models.Resource
 
 @{
     ViewData["Title"] = "Edit";
@@ -11,18 +10,18 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Resource.ID" />
+            <input type="hidden" asp-for="ID" />
             <div class="form-group">
-                <label asp-for="Resource.TopicID" class="control-label"></label>
-                <select asp-for="Resource.TopicID" class="form-control" asp-items="ViewBag.TopicID"></select>
-                <span asp-validation-for="Resource.TopicID" class="text-danger"></span>
+                <label asp-for="TopicID" class="control-label"></label>
+                <select asp-for="TopicID" class="form-control" asp-items="ViewBag.TopicID"></select>
+                <span asp-validation-for="TopicID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Resource.FilePath" class="control-label"></label>
-                <input asp-for="Resource.FilePath" class="form-control" />
-                <span asp-validation-for="Resource.FilePath" class="text-danger"></span>
+                <label asp-for="FilePath" class="control-label"></label>
+                <input asp-for="FilePath" class="form-control" />
+                <span asp-validation-for="FilePath" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -32,7 +31,7 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

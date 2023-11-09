@@ -1,5 +1,4 @@
-﻿@page
-@model liveraryIdentity.Views.Categories.EditModel
+﻿@model liveraryIdentity.Models.Category
 
 @{
     ViewData["Title"] = "Edit";
@@ -11,28 +10,28 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Category.ID" />
+            <input type="hidden" asp-for="ID" />
             <div class="form-group">
-                <label asp-for="Category.Title" class="control-label"></label>
-                <input asp-for="Category.Title" class="form-control" />
-                <span asp-validation-for="Category.Title" class="text-danger"></span>
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Category.Description" class="control-label"></label>
-                <input asp-for="Category.Description" class="form-control" />
-                <span asp-validation-for="Category.Description" class="text-danger"></span>
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Category.DateCreated" class="control-label"></label>
-                <input asp-for="Category.DateCreated" class="form-control" />
-                <span asp-validation-for="Category.DateCreated" class="text-danger"></span>
+                <label asp-for="DateCreated" class="control-label"></label>
+                <input asp-for="DateCreated" class="form-control" />
+                <span asp-validation-for="DateCreated" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Category.Thumbnail" class="control-label"></label>
-                <input asp-for="Category.Thumbnail" class="form-control" />
-                <span asp-validation-for="Category.Thumbnail" class="text-danger"></span>
+                <label asp-for="Thumbnail" class="control-label"></label>
+                <input asp-for="Thumbnail" class="form-control" />
+                <span asp-validation-for="Thumbnail" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -42,7 +41,7 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
