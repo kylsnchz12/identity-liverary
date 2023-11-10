@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using liveraryIdentity.Data;
+using liveraryIdentity.Data.Mocks;
+using liveraryIdentity.Data.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddTransient<ITrainingRepository, MockTrainingRepository>();
+builder.Services.AddTransient<ICategoryRepository, MockCategoryRepository>();
 
 var app = builder.Build();
 
@@ -40,6 +45,17 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+// using(var scope = app.Services.CreateScope())
+// {
+//     var serviceCollection = app.Services.GetService<IServiceCollection>(); 
+//     builder.Services.AddScoped<ITrainingRepository, MockTrainingRepository>();
+
+//     serviceCollection.AddTransient<ITrainingRepository, MockTrainingRepository>();
+//     serviceCollection.AddTransient<ICategoryRepository, MockCategoryRepository>();
+
+//     serviceCollection?.AddMvc();
+// }
 
 using(var scope = app.Services.CreateScope())
 {
