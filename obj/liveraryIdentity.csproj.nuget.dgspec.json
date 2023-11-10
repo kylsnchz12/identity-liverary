@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\M-4D\\University Files\\4th Year 1st Sem\\Free Elec\\identity-liverary\\liveraryIdentity.csproj": {}
+    "/Users/kyle/Desktop/GitHub/identity-liverary/liveraryIdentity.csproj": {}
   },
   "projects": {
-    "D:\\M-4D\\University Files\\4th Year 1st Sem\\Free Elec\\identity-liverary\\liveraryIdentity.csproj": {
+    "/Users/kyle/Desktop/GitHub/identity-liverary/liveraryIdentity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\M-4D\\University Files\\4th Year 1st Sem\\Free Elec\\identity-liverary\\liveraryIdentity.csproj",
+        "projectUniqueName": "/Users/kyle/Desktop/GitHub/identity-liverary/liveraryIdentity.csproj",
         "projectName": "liveraryIdentity",
-        "projectPath": "D:\\M-4D\\University Files\\4th Year 1st Sem\\Free Elec\\identity-liverary\\liveraryIdentity.csproj",
-        "packagesPath": "C:\\Users\\Arvic Micah Gingoyon\\.nuget\\packages\\",
-        "outputPath": "D:\\M-4D\\University Files\\4th Year 1st Sem\\Free Elec\\identity-liverary\\obj\\",
+        "projectPath": "/Users/kyle/Desktop/GitHub/identity-liverary/liveraryIdentity.csproj",
+        "packagesPath": "/Users/kyle/.nuget/packages/",
+        "outputPath": "/Users/kyle/Desktop/GitHub/identity-liverary/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Arvic Micah Gingoyon\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/kyle/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -57,10 +55,8 @@
               "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.12, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -90,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }
