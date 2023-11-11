@@ -1,18 +1,16 @@
-namespace liveraryIdentity.Models;
-
-public class Training
+﻿namespace liveraryIdentity.Models
 {
-    public int TrainingId { get; set; }
+    public class Training
+    {
+        public int ID { get; set; }
+        public int CategoryID { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string Description { get; set; }
+        public DateTime DateCreated { get; set; }
+        public string Thumbnail { get; set; }
 
-    public string Title { get; set; } = string.Empty;
+        public ICollection<Topic> Topics { get; set; }
 
-    public string Author { get; set; } = string.Empty;
-
-    public string TrainingDescription { get; set; } = string.Empty;
-
-    public int CategoryId { get; set; }
-
-    public string ImageUrl { get; set; } = string.Empty;
-    
-    public List<Topic>? Topics { get; set; }
+    }
 }

@@ -22,9 +22,16 @@
             <nav>
                 <div class="header-content">
                     <div class="logo">
-                        <a asp-area="" asp-controller="Home" asp-action="Index">
-                            <img src="~/images/logo.png" alt="Logo" width="254" height="72" />
-                        </a>
+                        @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                        {
+                            <a asp-area="" asp-controller="AdminHome" asp-action="Index">
+                                <img src="~/images/logo.png" alt="Logo" width="254" height="72" />
+                            </a>
+                        } else {
+                            <a asp-area="" asp-controller="Home" asp-action="Index">
+                                <img src="~/images/logo.png" alt="Logo" width="254" height="72" />
+                            </a>
+                        }
                     </div>
                     <div class="search-bar">
                         <div class="input-container">
@@ -37,14 +44,18 @@
                     @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
                     {
                         <div class="heading-container">
-                            <button class="edit-button-header">
-                                <img src="~/images/add.png" alt="Add Icon" /> Create Training
-                            </button>
+                            <a asp-area="" asp-controller="Trainings" asp-action="Create">
+                                <button class="edit-button-header">
+                                    <img src="~/images/add.png" alt="Add Icon" /> Create Training
+                                </button>
+                            </a>
                         </div>
                         <div class="heading-container">
-                            <button class="edit-button-header">
-                                <img src="~/images/add.png" alt="Add Icon" /> Create Category
-                            </button>
+                            <a asp-area="" asp-controller="Categories" asp-action="Create">
+                                <button class="edit-button-header">
+                                    <img src="~/images/add.png" alt="Add Icon" /> Create Category
+                                </button>
+                            </a>
                         </div>
                     }
                     <div id="login">
@@ -86,9 +97,6 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation/1.19.3/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

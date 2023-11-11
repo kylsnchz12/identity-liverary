@@ -1,12 +1,12 @@
-namespace liveraryIdentity.Models;
-
-public class Topic
+﻿namespace liveraryIdentity.Models
 {
-    public int TopicId { get; set; }
+    public class Topic
+    {
+        public int ID { get; set; }
+        public int TrainingID { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
 
-    public string Title { get; set; }  = string.Empty;
-
-    public string TopicDescription { get; set; }  = string.Empty;
-
-    
+        public ICollection<Resource> Resources { get; set; }
+    }
 }

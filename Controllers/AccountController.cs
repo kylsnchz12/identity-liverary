@@ -16,12 +16,14 @@ namespace liveraryIdentity.Controllers
             this.signInManager = signInManager;
         }
 
+        [Authorize(Roles = "SuperAdmin")]
         [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
+        [Authorize(Roles = "SuperAdmin")]
         [HttpPost]
         public async Task<IActionResult> Create(RegisterViewModel model)
         {
@@ -30,12 +32,13 @@ namespace liveraryIdentity.Controllers
                 var user = new IdentityUser { UserName = model.Email, Email = model.Email};
                 var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Admin");
+                return RedirectToAction("UserList", "SuperAdmin");
 
-                if(result.Succeeded)
-                {
-                    await signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("index", "adminhome");
-                }
+                // if(result.Succeeded)
+                // {
+                //     await signInManager.SignInAsync(user, isPersistent: false);
+                //     return RedirectToAction("index", "adminhome");
+                // }
             }
 
             return View(model);
@@ -70,5 +73,6 @@ namespace liveraryIdentity.Controllers
             await signInManager.SignOutAsync();
             return RedirectToAction("index", "home");
         }
+
     }
 }

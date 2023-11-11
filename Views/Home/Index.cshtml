@@ -1,5 +1,5 @@
 ﻿@using liveraryIdentity.Models
-@model IEnumerable<Training>
+@model HomeViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -9,100 +9,103 @@
         <div class="title-div">
             <h1 class="custom-heading">Training Category</h1>
         </div>
+        @* 1st Category Row *@
         <div class="scrollable-container">
             <div class="div-row">
-                <a href="/Home/Category">
-                    <div class="category-div" style="background-image: url('/images/aws_bg.png');">
-                        <div class="text">Amazon Web Services</div>
-                    </div>
-                </a>
-                <div class="category-div" style="background-image: url('/images/python_bg.png');">
-                    <div class="text">Python Programming</div>
-                </div>
-                <div class="category-div" style="background-image: url('/images/js_bg.png');">
-                    <div class="text">Javascript Programming</div>
-                </div>
-                <div class="category-div" style="background-image: url('/images/ms_bg.png');">
-                    <div class="text">Microsoft Azure</div>
-                </div>
-                <div class="category-div" style="background-image: url('/images/google_bg.png');">
-                    <div class="text">Google Cloud Platform</div>
-                </div>
-                <div class="category-div" style="background-image: url('/images/oracle_bg.png');">
-                    <div class="text">Oracle Cloud</div>
-                </div>
+                @for (int i = 0; i < Math.Min(Model.Categories.Count(), 4); i++)
+                {
+                    var category = Model.Categories.ElementAt(i);
+                    <a href="/Home/Category/@category.ID">
+                        <div class="category-div" style="background-image: url('@Url.Content(category.Thumbnail)');">
+                            <div class="text">@category.Title</div>
+                        </div>
+                    </a>
+                }
             </div>
         </div>
-        <div class="scrollable-container">
-            <div class="div-row">
-                <div class="category-div" style="background-image: url('/images/oracle_bg.png');">
-                    <div class="text">Oracle Cloud</div>
-                </div>
-                <div class="category-div" style="background-image: url('/images/google_bg.png');">
-                    <div class="text">Google Cloud Platform</div>
-                </div>
-                <div class="category-div" style="background-image: url('/images/ms_bg.png');">
-                    <div class="text">Microsoft Azure</div>
-                </div>
-                <div class="category-div" style="background-image: url('/images/js_bg.png');">
-                    <div class="text">Javascript Programming</div>
-                </div>
-                <div class="category-div" style="background-image: url('/images/python_bg.png');">
-                    <div class="text">Python Programming</div>
-                </div>
-                <div class="category-div" style="background-image: url('/images/aws_bg.png');">
-                    <div class="text">Amazon Web Services</div>
+        @* 2nd Category Row*@
+        @if (Model.Categories.Count() > 4)
+        {
+            <div class="scrollable-container">
+                <div class="div-row">
+                    @for (int i = 4; i < Model.Categories.Count(); i++)
+                    {
+                        var category = Model.Categories.ElementAt(i);
+                        <a href="/Home/Category/@category.ID">
+                            <div class="category-div" style="background-image: url('@Url.Content(category.Thumbnail)');">
+                                <div class="text">@category.Title</div>
+                            </div>
+                        </a>
+                    }
                 </div>
             </div>
-        </div>
+        }
         <div style="padding: 10px;"></div>
         <div class="title-div">
             <h1 class="custom-heading">Trainings</h1>
         </div>
+        @* 1st Training Cards Row *@
         <div class="scrollable-container2">
-            @{
-                foreach(var training in Model)
-                {
-                    <div class="div-training-row">
-                        <a href="/Home/Training">
-                            <div class="training-div" style="background-image: url('/images/training1.png');">
-                                <div class="upper-row">
-                                    <div class="title-upper-right">
-                                        <p class="title-right">@training.CategoryId</p>
-                                    </div>
-                                    <div class="text-bottom-left">
-                                        <h2>@training.Title</h2>
-                                        <p>@training.TrainingDescription</p>
-                                    </div>
+            @for (int i = 0; i < Math.Min(Model.Trainings.Count(), 4); i++)
+            {
+                var training = Model.Trainings.ElementAt(i);
+                var category = Model.Categories.FirstOrDefault(c => c.ID == training.CategoryID);
+                <div class="div-training-row">
+                    <a href="/Home/Training/@training.ID">
+                        <div class="training-div" style="background-image: url('@Url.Content(training.Thumbnail)');">
+                            <div class="upper-row">
+                                <div class="title-upper-right">
+                                    @if (category != null)
+                                    {
+                                        <p class="title-right">@category.Title</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="title-right">Category Not Available</p>
+                                    }
+                                </div>
+                                <div class="text-bottom-left">
+                                    <h2>@training.Title</h2>
+                                    <p>@(training.Description.Length > 40 ? training.Description.Substring(0, 40) + "..." : training.Description)</p>
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                }
+                        </div>
+                    </a>
+                </div>
             }
         </div>
-        <div class="scrollable-container2">
-            @{
-                foreach(var training in Model)
+        @* 2nd Training Cards Row *@
+        @if (Model.Trainings.Count() > 4)
+        {
+            <div class="scrollable-container2">
+                @for (int i = 4; i < Model.Trainings.Count(); i++)
                 {
+                    var training = Model.Trainings.ElementAt(i);
+                    var category = Model.Categories.FirstOrDefault(c => c.ID == training.CategoryID);
                     <div class="div-training-row">
-                        <a href="/Home/Training">
-                            <div class="training-div" style="background-image: url('/images/training1.png');">
-                                <div class="upper-row">
-                                    <div class="title-upper-right">
-                                        <p class="title-right">@training.CategoryId</p>
-                                    </div>
-                                    <div class="text-bottom-left">
-                                        <h2>@training.Title</h2>
-                                        <p>@training.TrainingDescription</p>
-                                    </div>
+                    <a href="/Home/Training/@training.ID">
+                        <div class="training-div" style="background-image: url('@Url.Content(training.Thumbnail)');">
+                            <div class="upper-row">
+                                <div class="title-upper-right">
+                                    @if (category != null)
+                                    {
+                                        <p class="title-right">@category.Title</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="title-right">Category Not Available</p>
+                                    }
+                                </div>
+                                <div class="text-bottom-left">
+                                    <h2>@training.Title</h2>
+                                    <p>@(training.Description.Length > 40 ? training.Description.Substring(0, 40) + "..." : training.Description)</p>
                                 </div>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
+                </div>
                 }
-            }
-        </div>
-        
+            </div>
+        }
     </div>
 </body>

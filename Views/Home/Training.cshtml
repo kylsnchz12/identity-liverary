@@ -1,45 +1,30 @@
+@model Training
+
 @{
     ViewData["Title"] = "Training Card";
 }
 <body>
-    <div class="training-cover" style="background-image: url('/images/training_bg.png');">
+    <div class="training-cover" style="background-image: url('@Url.Content(Model.Thumbnail)');">
         <div class="star-row">
             <div class="star" style="background-image: url('/images/star.png');"></div>
             <div class="star" style="background-image: url('/images/star.png');"></div>
             <div class="star" style="background-image: url('/images/star.png');"></div>
         </div>
         <div class="text-container">
-            <h1>Training 1</h1>
+            <h1>@Model.Title</h1>
         </div>
     </div>
     <div class="content-wrapper">
         <div class="category-details2">
             <h1>Category</h1>
             <div class="category-div2" style="background-image: url('/images/aws_bg.png');">
-                <div class="text">Amazon Web Services</div>
+                <div class="text">@Model.CategoryID</div>
             </div>
             <div class="left-details">
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    @Model.Description
                 </p>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                </p>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                </p>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                </p>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                </p>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                </p>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                </p>
+                
             </div>
         </div>
         <div class="right-details-training">

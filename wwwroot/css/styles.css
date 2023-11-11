@@ -613,6 +613,34 @@ a {
     margin-right: 5px;
 }
 
+.logout-add {
+    /* margin-top: 10px;
+    margin-left: 25px; */
+    position: fixed;
+    bottom: 100px;
+    left: 25px;
+    
+    font-weight: bold;
+    font-size: 20px;
+
+    background-color: transparent;
+    color: #5E17EB;
+    border: none;
+    /* padding: 5px 10px; */
+    padding-bottom: 5px;
+    /* border-radius: 5px; */
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.logout-add img{
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+}
+
 .right-details {
     background-color: #F5F6F8;
     height: 100vh;

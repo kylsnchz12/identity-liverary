@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using liveraryIdentity.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace liveraryIdentity.Data;
@@ -9,4 +10,8 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Training> Trainings { get; set; }
+    public DbSet<Topic> Topics { get; set; }
+    public DbSet<Resource> Resources { get; set; }
 }

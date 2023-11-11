@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kyle/Desktop/GitHub/identity-liverary/liveraryIdentity.csproj": {}
+    "/Users/kyle/Downloads/identity-liverary-WindowsVer/liveraryIdentity.csproj": {}
   },
   "projects": {
-    "/Users/kyle/Desktop/GitHub/identity-liverary/liveraryIdentity.csproj": {
+    "/Users/kyle/Downloads/identity-liverary-WindowsVer/liveraryIdentity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kyle/Desktop/GitHub/identity-liverary/liveraryIdentity.csproj",
+        "projectUniqueName": "/Users/kyle/Downloads/identity-liverary-WindowsVer/liveraryIdentity.csproj",
         "projectName": "liveraryIdentity",
-        "projectPath": "/Users/kyle/Desktop/GitHub/identity-liverary/liveraryIdentity.csproj",
+        "projectPath": "/Users/kyle/Downloads/identity-liverary-WindowsVer/liveraryIdentity.csproj",
         "packagesPath": "/Users/kyle/.nuget/packages/",
-        "outputPath": "/Users/kyle/Desktop/GitHub/identity-liverary/obj/",
+        "outputPath": "/Users/kyle/Downloads/identity-liverary-WindowsVer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kyle/.nuget/NuGet/NuGet.Config"
@@ -55,12 +55,10 @@
               "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.11, )"
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.12, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
