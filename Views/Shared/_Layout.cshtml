@@ -36,7 +36,9 @@
                         }
                     </div>
                     @if(!Context.Request.Path.StartsWithSegments("/Home/Category") &&
-                        !Context.Request.Path.StartsWithSegments("/Home/Training"))
+                        !Context.Request.Path.StartsWithSegments("/Home/Training") &&
+                        !Context.Request.Path.StartsWithSegments("/Trainings") &&
+                        !Context.Request.Path.StartsWithSegments("/Categories"))
                     {
                         <div class="search-bar">
                             <div class="input-container">

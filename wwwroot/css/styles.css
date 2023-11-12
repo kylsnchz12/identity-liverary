@@ -754,3 +754,17 @@ a {
 .margin-page1 {
     margin: 22px;
 }
+
+.delete-training {
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 12px;
+    background-color: #7d0404;
+}
+
+.edit-training {
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 12px;
+    background-color: #290968;
+}

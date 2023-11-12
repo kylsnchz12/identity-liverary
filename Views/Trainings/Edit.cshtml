@@ -48,8 +48,11 @@
                 <br>
                 <div>
                     <label for="coverImage" id="mylabel" asp-for="Thumbnail"></label>
-                    <p style="color: #4D1FA8;">Current Thumbnail</p>
-                    <input class="form-control-new" asp-for="Thumbnail">
+                    @if (!string.IsNullOrEmpty(Model.Thumbnail))
+                    {
+                        <p style="color: #4D1FA8;">Current Thumbnail</p>
+                        <img src="/images/@Model.Thumbnail" alt="Current Thumbnail" style="max-width: 200px; max-height: 200px;" />
+                    }
                     <p style="color: #4D1FA8;">Upload new Thumbnail</p>
                     <label class="file-upload-btn">
                         <input asp-for="Thumbnail" type="file" id="coverImage" class="form-control-new" accept="image/*" onchange="displayFileName()">
@@ -57,7 +60,7 @@
                             <i style="font-size: medium; font-family: 'Poppins', sans-serif; font-weight: 200;">
                                 Upload photo
                             </i>
-                        </i> 
+                        </i>
                         <p id="fileName" style="display:none; color: black"></p>
                     </label>
                     <span asp-validation-for="Thumbnail" class="text-danger"></span>
