@@ -9,313 +9,317 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = liveraryIdentity
 build_property.RootNamespace = liveraryIdentity
-build_property.ProjectDir = /Users/kyle/Downloads/identity-liverary-WindowsVer/
+build_property.ProjectDir = /Users/kyle/Desktop/GitHub/identity-liverary/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/kyle/Downloads/identity-liverary-WindowsVer
+build_property.MSBuildProjectDirectory = /Users/kyle/Desktop/GitHub/identity-liverary
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9BY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Db25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Db25maXJtRW1haWxDaGFuZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9FeHRlcm5hbExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Gb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Gb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Lockout.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Lockout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2Nrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Login.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dpbldpdGgyZmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dpbldpdGhSZWNvdmVyeUNvZGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Logout.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvRGVsZXRlUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvRGlzYWJsZTJmYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/Email.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvRXh0ZXJuYWxMb2dpbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvR2VuZXJhdGVSZWNvdmVyeUNvZGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvUmVzZXRBdXRoZW50aWNhdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvU2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvU2hvd1JlY292ZXJ5Q29kZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvVHdvRmFjdG9yQXV0aGVudGljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvX1N0YXR1c01lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9NYW5hZ2UvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/Register.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZXNlbmRFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9fU3RhdHVzTWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9fVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/Error.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/_ViewImports.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Areas/Identity/Pages/_ViewStart.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Pages/_ValidationScriptsPartial.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Account/Create.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Account/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Account/Login.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/AdminHome/Index.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/AdminHome/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5Ib21lL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Categories/Create.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Categories/Delete.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Categories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Categories/Details.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Categories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Categories/Edit.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Categories/Index.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Home/Category.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Home/AddTraining.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZGRUcmFpbmluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Home/Category.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9DYXRlZ29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Home/Index.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Home/Privacy.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Home/Training.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Home/Training.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9UcmFpbmluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Resources/Create.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Resources/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzb3VyY2VzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Resources/Delete.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Resources/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzb3VyY2VzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Resources/Details.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Resources/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzb3VyY2VzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Resources/Edit.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Resources/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzb3VyY2VzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Resources/Index.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Resources/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzb3VyY2VzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Shared/Error.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Shared/_LoginPartial.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/SuperAdmin/UserList.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/SuperAdmin/UserList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VwZXJBZG1pbi9Vc2VyTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/SuperAdmin/ViewDetails.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/SuperAdmin/ViewDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VwZXJBZG1pbi9WaWV3RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Topics/Create.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Topics/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9waWNzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Topics/Delete.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Topics/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9waWNzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Topics/Details.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Topics/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9waWNzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Topics/Edit.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Topics/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9waWNzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Topics/Index.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Topics/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9waWNzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Trainings/Create.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Trainings/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhaW5pbmdzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Trainings/Delete.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Trainings/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhaW5pbmdzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Trainings/Details.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Trainings/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhaW5pbmdzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Trainings/Edit.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Trainings/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhaW5pbmdzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Trainings/Index.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Trainings/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhaW5pbmdzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/_ViewImports.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/_ViewStart.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kyle/Downloads/identity-liverary-WindowsVer/Views/Shared/_Layout.cshtml]
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-j4z6ug6jm9

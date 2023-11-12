@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: #F5F6F8;
+    /* background-color: #F5F6F8; */
 }
 
 .header-content {
@@ -520,7 +520,7 @@ a {
     font-size: 36px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    background-color: #F5F6F8;
+    /* background-color: #F5F6F8; */
 }
 
 .right-login {
@@ -642,7 +642,7 @@ a {
 }
 
 .right-details {
-    background-color: #F5F6F8;
+    /* background-color: #F5F6F8; */
     height: 100vh;
     width: 100vw;
     /* filter: drop-shadow(0px -1px 10px rgba(0,0,0,0.25)); */
@@ -740,4 +740,17 @@ a {
 .edit-button-header img {
     margin-right: 5px;
     background-color: transparent;
+}
+
+.new-training {
+    font-size: 31px;
+    background-color: transparent;
+}
+
+.margin-page {
+    margin: 32px;
+}
+
+.margin-page1 {
+    margin: 22px;
 }

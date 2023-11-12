@@ -4,54 +4,82 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+@section styles {
+    <link rel="stylesheet" href="~/css/training.css" />
+}
 
-<h4>Training</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ID" />
-            <div class="form-group">
-                <label asp-for="CategoryID" class="control-label"></label>
-                <select asp-for="CategoryID" class="form-control" asp-items="ViewBag.CategoryID"></select>
-                <span asp-validation-for="CategoryID" class="text-danger"></span>
+<div class="main-container">
+    <form asp-action="Edit" class="form-container">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="ID" />
+        <div class="left-side">
+            <div>
+                <h1 class="new-training">Edit Training</h1>
             </div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+            <br>
+            <div class="padding-left">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <!-- Title -->
+                <div>
+                    <label id="mylabel" asp-for="Title"></label>
+                    <input class="form-control-new" asp-for="Title">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <!-- Author -->
+                <br>
+                <div>
+                    <label id="mylabel" asp-for="Author"></label>
+                    <input class="form-control-new" asp-for="Author">
+                    <span asp-validation-for="Author" class="text-danger"></span>
+                </div>
+
+                <!-- Category -->
+                <br>
+                <div>
+                    <label id="mylabel" asp-for="CategoryID"></label>
+                    <div class="custom-select">
+                        <select class="form-control-new" asp-for="CategoryID" asp-items="ViewBag.CategoryID">
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Thumbnail -->
+                <br>
+                <div>
+                    <label for="coverImage" id="mylabel" asp-for="Thumbnail"></label>
+                    <p style="color: #4D1FA8;">Current Thumbnail</p>
+                    <input class="form-control-new" asp-for="Thumbnail">
+                    <p style="color: #4D1FA8;">Upload new Thumbnail</p>
+                    <label class="file-upload-btn">
+                        <input asp-for="Thumbnail" type="file" id="coverImage" class="form-control-new" accept="image/*" onchange="displayFileName()">
+                        <i id="uploadIcon" class="fas fa-upload">
+                            <i style="font-size: medium; font-family: 'Poppins', sans-serif; font-weight: 200;">
+                                Upload photo
+                            </i>
+                        </i> 
+                        <p id="fileName" style="display:none; color: black"></p>
+                    </label>
+                    <span asp-validation-for="Thumbnail" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+                <div>
+                    <a asp-action="Index" class="btn btn-info" style="margin-top: 5px;">Back to List</a>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Author" class="control-label"></label>
-                <input asp-for="Author" class="form-control" />
-                <span asp-validation-for="Author" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+        </div>
+        <div class="right-container">
+            <!-- Description -->
+            <div>
+                <label id="mylabel" asp-for="Description">Description</label>
+                <textarea id="description" class="form-control-new" rows="19" asp-for="Description" style="white-space: normal;"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="DateCreated" class="control-label"></label>
-                <input asp-for="DateCreated" class="form-control" />
-                <span asp-validation-for="DateCreated" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Thumbnail" class="control-label"></label>
-                <input asp-for="Thumbnail" class="form-control" />
-                <span asp-validation-for="Thumbnail" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
 </div>
 
 @section Scripts {

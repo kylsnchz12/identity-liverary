@@ -3,12 +3,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @RenderSection("styles", required: false)
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - liveraryIdentity</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/liveraryIdentity.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="~/css/styles.css" />
 </head>
 <body>
@@ -33,14 +35,18 @@
                             </a>
                         }
                     </div>
-                    <div class="search-bar">
-                        <div class="input-container">
-                            <input type="text" placeholder="Search" />
-                            <button type="submit">
-                                <img src="~/images/search.png" alt="Search" />
-                            </button>
+                    @if(!Context.Request.Path.StartsWithSegments("/Home/Category") &&
+                        !Context.Request.Path.StartsWithSegments("/Home/Training"))
+                    {
+                        <div class="search-bar">
+                            <div class="input-container">
+                                <input type="text" placeholder="Search" />
+                                <button type="submit">
+                                    <img src="~/images/search.png" alt="Search" />
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    }
                     @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
                     {
                         <div class="heading-container">
@@ -49,6 +55,7 @@
                                     <img src="~/images/add.png" alt="Add Icon" /> Create Training
                                 </button>
                             </a>
+                
                         </div>
                         <div class="heading-container">
                             <a asp-area="" asp-controller="Categories" asp-action="Create">
@@ -99,6 +106,22 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        function displayFileName() {
+            var input = document.getElementById('coverImage');
+            var fileNameDisplay = document.getElementById('fileName');
+            var uploadIcon = document.getElementById('uploadIcon');
+
+            if (input.files.length > 0) {
+                fileNameDisplay.innerText = input.files[0].name;
+                fileNameDisplay.style.display = 'inline';
+                uploadIcon.style.display = 'none';
+            } else {
+                fileNameDisplay.style.display = 'none';
+                uploadIcon.style.display = 'inline';
+            }
+        }
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

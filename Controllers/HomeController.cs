@@ -44,6 +44,11 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult AddTraining()
+    {
+        return View();
+    }
+
     [HttpGet]
     public IActionResult Category(int id)
     {
@@ -58,11 +63,18 @@ public class HomeController : Controller
     public IActionResult Training(int id)
     {
         var training = _trainingRepository.GetTrainingById(id);
+        var categories = _categoryRepository.Categories;
         if (training == null){
             return NotFound();
         }
 
-        return View(training);
+        var viewModel = new TrainingViewModel
+        {
+            Training = training,
+            Categories = categories
+        };
+
+        return View(viewModel);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

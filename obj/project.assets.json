@@ -11196,11 +11196,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kyle/Downloads/identity-liverary-WindowsVer/liveraryIdentity.csproj",
+      "projectUniqueName": "/Users/kyle/Desktop/GitHub/identity-liverary/liveraryIdentity.csproj",
       "projectName": "liveraryIdentity",
-      "projectPath": "/Users/kyle/Downloads/identity-liverary-WindowsVer/liveraryIdentity.csproj",
+      "projectPath": "/Users/kyle/Desktop/GitHub/identity-liverary/liveraryIdentity.csproj",
       "packagesPath": "/Users/kyle/.nuget/packages/",
-      "outputPath": "/Users/kyle/Downloads/identity-liverary-WindowsVer/obj/",
+      "outputPath": "/Users/kyle/Desktop/GitHub/identity-liverary/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/kyle/.nuget/NuGet/NuGet.Config"
