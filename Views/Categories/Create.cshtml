@@ -57,7 +57,7 @@
             <!-- Description -->
             <div>
                 <label id="mylabel" asp-for="Description">Description</label>
-                <textarea id="description" class="form-control-new" rows="19" asp-for="Description"></textarea>
+                <textarea id="description" class="form-control-new" rows="19" asp-for="Description" maxlength="1015"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
         </div>

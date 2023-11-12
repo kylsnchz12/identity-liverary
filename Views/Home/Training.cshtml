@@ -32,6 +32,16 @@
             </div>
         </div>
         <div class="right-details-training">
+            @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+            {
+                <div class="heading-container">
+                    <a asp-area="" asp-controller="Topics" asp-action="Index">
+                        <button class="edit-button-header">
+                                <img src="~/images/edit.png" alt="Add Icon" /> Edit Topics
+                        </button>
+                    </a>
+                </div>
+            }
             <div class="topic-card">
                 <h1>Topic 1</h1>
                 <p>

@@ -44,19 +44,22 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult AddTraining()
-    {
-        return View();
-    }
-
     [HttpGet]
     public IActionResult Category(int id)
     {
         var category = _categoryRepository.GetCategoryById(id);
+        var trainings = _trainingRepository.Trainings;
         if (category == null){
             return NotFound();
         }
-        return View(category);
+
+        var viewModel = new CategoryViewModel
+        {
+            Training = trainings,
+            Categories = category
+        };
+
+        return View(viewModel);
     }
 
     [HttpGet]

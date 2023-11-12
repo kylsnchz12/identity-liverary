@@ -38,7 +38,8 @@
                     @if(!Context.Request.Path.StartsWithSegments("/Home/Category") &&
                         !Context.Request.Path.StartsWithSegments("/Home/Training") &&
                         !Context.Request.Path.StartsWithSegments("/Trainings") &&
-                        !Context.Request.Path.StartsWithSegments("/Categories"))
+                        !Context.Request.Path.StartsWithSegments("/Categories") &&
+                        !Context.Request.Path.StartsWithSegments("/AdminHome/TrainingAdmin"))
                     {
                         <div class="search-bar">
                             <div class="input-container">
@@ -57,7 +58,6 @@
                                     <img src="~/images/add.png" alt="Add Icon" /> Create Training
                                 </button>
                             </a>
-                
                         </div>
                         <div class="heading-container">
                             <a asp-area="" asp-controller="Categories" asp-action="Create">
