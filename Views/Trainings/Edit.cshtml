@@ -55,7 +55,13 @@
                     }
                     <p style="color: #4D1FA8;">Upload new Thumbnail</p>
                     <label class="file-upload-btn">
-                        <input asp-for="Thumbnail" type="file" id="coverImage" class="form-control-new" accept="image/*" onchange="displayFileName()">
+                        @if (string.IsNullOrEmpty(Model.Thumbnail))
+                        {
+                            <input asp-for="Thumbnail" type="file" id="coverImage" class="form-control-new" accept="image/*" onchange="displayFileName()">
+                        } else {
+                            <input asp-for="Thumbnail" type="file" id="coverImage" class="form-control-new" accept="image/*" onchange="displayFileName()" style="display:none;">
+                        }
+                        
                         <i id="uploadIcon" class="fas fa-upload">
                             <i style="font-size: medium; font-family: 'Poppins', sans-serif; font-weight: 200;">
                                 Upload photo

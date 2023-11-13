@@ -24,9 +24,9 @@ namespace liveraryIdentity.Controllers
         // GET: Categories
         public async Task<IActionResult> Index()
         {
-              return _context.Categories != null ? 
-                          View(await _context.Categories.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
+            return _context.Categories != null ? 
+                        View(await _context.Categories.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
         }
 
         // GET: Categories/Details/5
@@ -143,7 +143,9 @@ namespace liveraryIdentity.Controllers
             {
                 category.Title = model.Title;
                 category.Description = model.Description;
-                category.Thumbnail = model.Thumbnail;
+                if(model.Thumbnail != null){
+                    category.Thumbnail = model.Thumbnail;
+                }
 
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

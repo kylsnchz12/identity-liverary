@@ -136,7 +136,9 @@ namespace liveraryIdentity.Controllers
                 training.Title = trainingRequest.Title;
                 training.Description = trainingRequest.Description;
                 training.Author = trainingRequest.Author;
-                training.Thumbnail = trainingRequest.Thumbnail;
+                if(trainingRequest.Thumbnail != null){
+                    training.Thumbnail = trainingRequest.Thumbnail;
+                }
                 training.CategoryID = trainingRequest.CategoryID;
 
                 await _context.SaveChangesAsync();
