@@ -35,7 +35,7 @@
             @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
             {
                 <div class="heading-container">
-                    <a asp-area="" asp-controller="Topics" asp-action="Index">
+                    <a href="/Topics/Create/@Model.Training.ID">
                         <button class="edit-button-header">
                                 <img src="~/images/edit.png" alt="Add Icon" /> Edit Topics
                         </button>

@@ -66,7 +66,8 @@ namespace liveraryIdentity.Controllers
                 Author = addTrainingRequest.Author,
                 Description = addTrainingRequest.Description,
                 Thumbnail = addTrainingRequest.Thumbnail,
-                CategoryID = addTrainingRequest.CategoryID
+                CategoryID = addTrainingRequest.CategoryID,
+                DateCreated = addTrainingRequest.DateCreated
 
             };
 

@@ -75,6 +75,7 @@ namespace liveraryIdentity.Controllers
             {
                 Title = addCategoryRequest.Title,
                 Description = addCategoryRequest.Description,
+                DateCreated = addCategoryRequest.DateCreated,
                 Thumbnail = addCategoryRequest.Thumbnail,
 
             };

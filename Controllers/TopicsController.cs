@@ -22,9 +22,9 @@ namespace liveraryIdentity.Controllers
         // GET: Topics
         public async Task<IActionResult> Index()
         {
-              return _context.Topics != null ? 
-                          View(await _context.Topics.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Topics'  is null.");
+            return _context.Topics != null ? 
+                        View(await _context.Topics.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.Topics'  is null.");
         }
 
         // GET: Topics/Details/5
@@ -48,21 +48,38 @@ namespace liveraryIdentity.Controllers
         // GET: Topics/Create
         public IActionResult Create()
         {
+    
             return View();
         }
 
         // POST: Topics/Create
+        // [HttpPost]
+        // [ValidateAntiForgeryToken]
+        // public async Task<IActionResult> Create([Bind("ID,TrainingID,Title,Description")] Topic topic)
+        // {
+        //     if (ModelState.IsValid)
+        //     {
+        //         _context.Add(topic);
+        //         await _context.SaveChangesAsync();
+        //         return RedirectToAction(nameof(Index));
+        //     }
+        //     return View(topic);
+        // }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,TrainingID,Title,Description")] Topic topic)
-        {
-            if (ModelState.IsValid)
+        public async Task<IActionResult> Create(AddTopicViewModel addTopicRequest)
+        {   
+            var topic = new Topic()
             {
-                _context.Add(topic);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(topic);
+                Title = addTopicRequest.Title,
+                Description = addTopicRequest.Description,
+                TrainingID = addTopicRequest.TrainingID
+            };
+
+            _context.Add(topic);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Topics/Edit/5
@@ -82,36 +99,54 @@ namespace liveraryIdentity.Controllers
         }
 
         // POST: Topics/Edit/5
+        // [HttpPost]
+        // [ValidateAntiForgeryToken]
+        // public async Task<IActionResult> Edit(int id, [Bind("ID,TrainingID,Title,Description")] Topic topic)
+        // {
+        //     if (id != topic.ID)
+        //     {
+        //         return NotFound();
+        //     }
+
+        //     if (ModelState.IsValid)
+        //     {
+        //         try
+        //         {
+        //             _context.Update(topic);
+        //             await _context.SaveChangesAsync();
+        //         }
+        //         catch (DbUpdateConcurrencyException)
+        //         {
+        //             if (!TopicExists(topic.ID))
+        //             {
+        //                 return NotFound();
+        //             }
+        //             else
+        //             {
+        //                 throw;
+        //             }
+        //         }
+        //         return RedirectToAction(nameof(Index));
+        //     }
+        //     return View(topic);
+        // }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,TrainingID,Title,Description")] Topic topic)
+        public async Task<IActionResult> Edit(Topic topicRequest)
         {
-            if (id != topic.ID)
-            {
-                return NotFound();
-            }
+            var topic = await _context.Topics.FindAsync(topicRequest.ID);
 
-            if (ModelState.IsValid)
+            if(topic != null)
             {
-                try
-                {
-                    _context.Update(topic);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!TopicExists(topic.ID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                topic.Title = topicRequest.Title;
+                topic.Description = topicRequest.Description;
+                topic.TrainingID = topicRequest.TrainingID;
+
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(topic);
+            return RedirectToAction(nameof(Index)); 
         }
 
         // GET: Topics/Delete/5
