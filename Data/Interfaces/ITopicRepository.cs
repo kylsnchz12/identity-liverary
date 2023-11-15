@@ -5,6 +5,8 @@ public interface ITopicRepository
 {
     IEnumerable<Topic> Topics { get; }
 
-    Topic? GetTopicById(int topicId);
+    List<Topic> GetAllTopics();
+
+    Topic? GetTopicById(int topicTrainingId);
 
 }

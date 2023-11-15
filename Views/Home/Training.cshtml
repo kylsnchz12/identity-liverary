@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Training Card";
     Category selectedCategory = null;
+    string topicName = "Edit Topics";
+    int isTopicNull = 0;
     for (int i = 0; i < Model.Categories.Count(); i++)
     {
         selectedCategory = Model.Categories.FirstOrDefault(c => c.ID == Model.Training.CategoryID);
@@ -35,82 +37,65 @@
             @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
             {
                 <div class="heading-container">
-                    <a href="/Topics/Create/@Model.Training.ID">
+                    <a href="/Topics/Create?trainingId=@Model.Training.ID">
                         <button class="edit-button-header">
-                                <img src="~/images/edit.png" alt="Add Icon" /> Edit Topics
+                            @for(int i=0; i < Model.Topics.Count(); i++)
+                            {
+                                @if(Model.Topics[i].TrainingID == Model.Training.ID)
+                                {
+                                    isTopicNull = 1;
+                                }
+                            }
+                            @if(isTopicNull == 0){
+                                topicName = "Add Topic";
+                            }
+                            <img src="~/images/edit.png" alt="Add Icon" /> @topicName
                         </button>
                     </a>
                 </div>
             }
-            <div class="topic-card">
-                <h1>Topic 1</h1>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                </p>
-                <div class="horizontal-scroll-container">
-                    <div class="resource-button">
-                        <h1>Resource Material 1</h1>
-                        <img src="/images/view_icon.png" alt="view" class="button-image-view" />
-                        <img src="/images/download_icon.png" alt="download" class="button-image-download" />
+            @for (int i = 0; i < Model.Topics.Count(); i++)
+            {
+                @if(Model.Topics[i].TrainingID == Model.Training.ID)
+                {
+                    isTopicNull = 1;
+                    <div class="topic-card">
+                        <h1>@Model.Topics[i].Title</h1> 
+                        <p>
+                            @Model.Topics[i].Description 
+                        </p>
+                        @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                        {
+                            <button class="edit-button-header"> 
+                                <img src="~/images/edit.png" alt="Edit Icon" /> Edit Resources
+                            </button>
+                        }
+                        <div class="horizontal-scroll-container">
+                            <div class="resource-button">
+                                <h1>Resource Material 1</h1>
+                                <img src="/images/view_icon.png" alt="view" class="button-image-view" />
+                                <img src="/images/download_icon.png" alt="download" class="button-image-download" />
+                            </div>
+                            <div class="resource-button">
+                                <h1>Resource Material 2</h1>
+                                <img src="/images/view_icon.png" alt="view" class="button-image-view" />
+                                <img src="/images/download_icon.png" alt="download" class="button-image-download" />
+                            </div>
+                            <div class="resource-button">
+                                <h1>Resource Material 3</h1>
+                                <img src="/images/view_icon.png" alt="view" class="button-image-view" />
+                                <img src="/images/download_icon.png" alt="download" class="button-image-download" />
+                            </div>
+                        </div>
                     </div>
-                    <div class="resource-button">
-                        <h1>Resource Material 2</h1>
-                        <img src="/images/view_icon.png" alt="view" class="button-image-view" />
-                        <img src="/images/download_icon.png" alt="download" class="button-image-download" />
-                    </div>
-                    <div class="resource-button">
-                        <h1>Resource Material 3</h1>
-                        <img src="/images/view_icon.png" alt="view" class="button-image-view" />
-                        <img src="/images/download_icon.png" alt="download" class="button-image-download" />
-                    </div>
+                }
+            }
+            @if(isTopicNull == 0)
+            {
+                <div class="topic-card">
+                    <h1 style="text-align: center;">No Topics Added</h1> 
                 </div>
-            </div>
-            <div class="topic-card">
-                <h1>Topic 2</h1>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                </p>
-                <div class="horizontal-scroll-container">
-                    <div class="resource-button">
-                        <h1>Resource Material 1</h1>
-                        <img src="/images/view_icon.png" alt="view" class="button-image-view" />
-                        <img src="/images/download_icon.png" alt="download" class="button-image-download" />
-                    </div>
-                    <div class="resource-button">
-                        <h1>Resource Material 2</h1>
-                        <img src="/images/view_icon.png" alt="view" class="button-image-view" />
-                        <img src="/images/download_icon.png" alt="download" class="button-image-download" />
-                    </div>
-                    <div class="resource-button">
-                        <h1>Resource Material 3</h1>
-                        <img src="/images/view_icon.png" alt="view" class="button-image-view" />
-                        <img src="/images/download_icon.png" alt="download" class="button-image-download" />
-                    </div>
-                </div>
-            </div>
-            <div class="topic-card">
-                <h1>Topic 3</h1>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                </p>
-                <div class="horizontal-scroll-container">
-                    <div class="resource-button">
-                        <h1>Resource Material 1</h1>
-                        <img src="/images/view_icon.png" alt="view" class="button-image-view" />
-                        <img src="/images/download_icon.png" alt="download" class="button-image-download" />
-                    </div>
-                    <div class="resource-button">
-                        <h1>Resource Material 2</h1>
-                        <img src="/images/view_icon.png" alt="view" class="button-image-view" />
-                        <img src="/images/download_icon.png" alt="download" class="button-image-download" />
-                    </div>
-                    <div class="resource-button">
-                        <h1>Resource Material 3</h1>
-                        <img src="/images/view_icon.png" alt="view" class="button-image-view" />
-                        <img src="/images/download_icon.png" alt="download" class="button-image-download" />
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </body>

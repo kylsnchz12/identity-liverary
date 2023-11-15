@@ -15,6 +15,11 @@ namespace liveraryIdentity.Data.Repositories
 
         public IEnumerable<Topic> Topics => _context.Topics.ToList();
 
-        public Topic GetTopicById(int topicId) => _context.Topics.FirstOrDefault(p => p.ID == topicId);
+        public List<Topic> GetAllTopics()
+        {
+            return _context.Topics.ToList();
+        }
+        
+        public Topic GetTopicById(int topicTrainingId) => _context.Topics.FirstOrDefault(p => p.TrainingID == topicTrainingId);
     }
 }

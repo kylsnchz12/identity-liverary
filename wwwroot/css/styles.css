@@ -341,14 +341,14 @@ a {
 
 .right-details-training {
     background-color: #F5F6F8;
-    height: 100vh;
+    height: auto;
     filter: drop-shadow(0px -1px 10px rgba(0,0,0,0.25));
     padding: 35px;
 }
 
 .topic-card {
     background-color:rgba(94, 23, 235, 0.14000000059604645);
-    height:198px;
+    height:auto;
     width:646px;
     border-radius:12px;
     padding: 15px;

@@ -46,9 +46,17 @@ namespace liveraryIdentity.Controllers
         }
 
         // GET: Topics/Create
-        public IActionResult Create()
+        public IActionResult Create(int? trainingId)
         {
-    
+            if (!trainingId.HasValue)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var training = _context.Trainings.FirstOrDefault(t => t.ID == trainingId.Value);
+            
+            ViewBag.TrainingID = trainingId.Value;
+            ViewBag.TrainingTitle = training.Title;
             return View();
         }
 
