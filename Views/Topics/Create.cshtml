@@ -3,34 +3,63 @@
 @{
     ViewData["Title"] = "Create";
 }
+@section styles {
+    <link rel="stylesheet" href="~/css/training.css" />
+}
 
-<h1>Create</h1>
+<h1>Create New Topic</h1>
 
-<h4>Topic</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+
+  
+
+<div class="main-container">
+    <form method="post" asp-action="Create" class="form-container">
+        <div class="left-side">
+            <br>
+            <br>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+  
+            <!-- Training id -->
+
             <div class="form-group">
-                <label asp-for="TrainingID" class="control-label"></label>
-                <select asp-for="TrainingID" class ="form-control" asp-items="ViewBag.TrainingID"></select>
+                <label id="mylabel" asp-for="TrainingID">TrainingID</label>
+
+                <div class="custom-select">
+                    <select class="form-control-new" asp-for="TrainingID" asp-items="ViewBag.TrainingID">
+                    </select>
+                </div>
             </div>
+            <br>
+            <!-- TITLE -->
+
+                <div class="form-group">
+                    <label id="mylabel" asp-for="Title">Title</label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+            <br>
+
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+
+                <input type="submit" value="Create" class="btn btn-primary" />
+
             </div>
+           
+
+         
+        </div>
+        <div class="right-container">
+            <!-- DESCRIPTION -->
+            <br>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <label id="mylabel" asp-for="Description">Description</label>
+                <textarea id="description" class="form-control-new" rows="7" asp-for="Description" maxlength="1015"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+        </div>
+       
+    </form>
 </div>
 
 <div>

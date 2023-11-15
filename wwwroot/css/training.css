@@ -7,6 +7,7 @@
     display: flex;
 }
 
+
 .left-side {
     flex: 1;
     padding-left: 25px;
@@ -183,3 +184,19 @@
 .file-upload-topic input {
     display: none;
 }
+
+
+.center-container {
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+
+.column-flex-container {
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+

@@ -768,3 +768,12 @@ a {
     padding: 12px;
     background-color: #290968;
 }
+
+.main-container1 {
+    display: flex;
+}
+
+
+.center-content {
+    justify-content: center;
+}
