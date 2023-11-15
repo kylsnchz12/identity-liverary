@@ -3,21 +3,58 @@
 @{
     ViewData["Title"] = "Create";
 }
-
 @section styles {
     <link rel="stylesheet" href="~/css/training.css" />
 }
 
-
     <h1>Create New Resource</h1>
-    <div class="center-container">
-        <div class="align-content-center">
-            asdasdas
-        </div>
+  
+   <div class="main-container1">
+       <div class="center-content">
+           <br />
+           <div class="col-md-10">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+
+
+                    <label id="mylabel" asp-for="TopicID">TopicID</label>
+                    <div class="custom-select">
+                        <select class="form-control" asp-for="TopicID" asp-items="ViewBag.TrainingID">
+                        </select>
+                    </div>
+                </div>
+
+                <br />
+                <div class="form-group">
+                    <label asp-for="FilePath" class="control-label"></label>
+
+                    <label class="file-upload-btn">
+                        <input asp-for="FilePath" type="file" id="coverImage" class="form-control-new" accept="image/*" onchange="displayFileName()">
+                        <i id="uploadIcon" class="fas fa-upload">
+                            <i style="font-size: medium; font-family: 'Poppins', sans-serif; font-weight: 200;">
+                                Upload File
+                            </i>
+                        </i>
+                        <p id="fileName" style="display:none; color: black"></p>
+                    </label>
+                    <span asp-validation-for="FilePath" class="text-danger"></span>
+                </div>
+
+                <br />
+                <br />
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+           </div>
+
+       </div>
 
 
 
-    </div>
+
+   </div>
 
     <div>
         <a asp-action="Index">Back to List</a>
