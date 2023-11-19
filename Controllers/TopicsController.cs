@@ -155,12 +155,11 @@ namespace liveraryIdentity.Controllers
             {
                 topic.Title = topicRequest.Title;
                 topic.Description = topicRequest.Description;
-                topic.TrainingID = topicRequest.TrainingID;
 
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), new { trainingId = topic.TrainingID });
             }
-            return RedirectToAction(nameof(Index)); 
+            return RedirectToAction(nameof(Index), new { trainingId = topic.TrainingID }); 
         }
 
         // GET: Topics/Delete/5
@@ -197,7 +196,7 @@ namespace liveraryIdentity.Controllers
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index), new { trainingId = topic.TrainingID });
         }
 
         private bool TopicExists(int id)

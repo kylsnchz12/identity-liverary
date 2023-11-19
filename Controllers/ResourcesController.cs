@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using liveraryIdentity.Data;
 using liveraryIdentity.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace liveraryIdentity.Controllers
 {
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class ResourcesController : Controller
     {
         private readonly ApplicationDbContext _context;
