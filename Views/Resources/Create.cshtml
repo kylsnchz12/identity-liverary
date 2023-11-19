@@ -4,32 +4,50 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+@section styles {
+    <link rel="stylesheet" href="~/css/training.css" />
+}
 
-<h4>Resource</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="TopicID" class="control-label"></label>
-                <select asp-for="TopicID" class ="form-control" asp-items="ViewBag.TopicID"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="FilePath" class="control-label"></label>
-                <input asp-for="FilePath" class="form-control" />
-                <span asp-validation-for="FilePath" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="main-container1">
+    <div class="center-content">
+        <br />
+        <div class="col-md-10">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+
+
+                    <label id="mylabel" asp-for="TopicID">TopicID</label>
+                    <div class="custom-select">
+                        <select class="form-control" asp-for="TopicID" asp-items="ViewBag.TrainingID">
+                        </select>
+                    </div>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label asp-for="FilePath" class="control-label"></label>
+
+                    <label class="file-upload-btn">
+                        <input asp-for="FilePath" type="file" id="coverImage" class="form-control-new" accept="image/*" onchange="displayFileName()">
+                        <i id="uploadIcon" class="fas fa-upload">
+                            <i style="font-size: medium; font-family: 'Poppins', sans-serif; font-weight: 200;">
+                                Upload File
+                            </i>
+                        </i>
+                        <p id="fileName" style="display:none; color: black"></p>
+                    </label>
+                    <span asp-validation-for="FilePath" class="text-danger"></span>
+                </div>
+
+                <br />
+                <br />
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" style="width: 500px; background-color: #A175FA; text-align: center; border: none;" />
+                </div>
+            </form>
+        </div>
+
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

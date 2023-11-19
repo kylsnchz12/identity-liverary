@@ -1082,3 +1082,5 @@ D:/M-4D/University Files/4th Year 1st Sem/Free Elec/identity-liverary/obj/Debug/
 /Users/kyle/Desktop/GitHub/identity-liverary/obj/Debug/net7.0/liveraryIdentity.pdb
 /Users/kyle/Desktop/GitHub/identity-liverary/obj/Debug/net7.0/liveraryIdentity.genruntimeconfig.cache
 /Users/kyle/Desktop/GitHub/identity-liverary/obj/Debug/net7.0/ref/liveraryIdentity.dll
+/Users/kyle/Desktop/GitHub/identity-liverary/bin/Debug/net7.0/PagedList.dll
+/Users/kyle/Desktop/GitHub/identity-liverary/bin/Debug/net7.0/PagedList.Mvc.dll

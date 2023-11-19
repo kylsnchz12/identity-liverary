@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Training Card";
     Category selectedCategory = null;
-    string topicName = "Edit Topics";
     int isTopicNull = 0;
     for (int i = 0; i < Model.Categories.Count(); i++)
     {
@@ -37,19 +36,25 @@
             @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
             {
                 <div class="heading-container">
+                    @for(int i=0; i < Model.Topics.Count(); i++)
+                    {
+                        @if(Model.Topics[i].TrainingID == Model.Training.ID)
+                        {
+                            isTopicNull = 1;
+                        }
+                    }
+                    @if(isTopicNull == 1){
+                    <div style="padding-right: 8px;">
+                        <a href="/Topics/Index?trainingId=@Model.Training.ID">
+                            <button class="edit-button-header">
+                                <img src="~/images/edit.png" alt="Add Icon" /> Edit Topics
+                            </button>
+                        </a>
+                    </div>
+                    }
                     <a href="/Topics/Create?trainingId=@Model.Training.ID">
                         <button class="edit-button-header">
-                            @for(int i=0; i < Model.Topics.Count(); i++)
-                            {
-                                @if(Model.Topics[i].TrainingID == Model.Training.ID)
-                                {
-                                    isTopicNull = 1;
-                                }
-                            }
-                            @if(isTopicNull == 0){
-                                topicName = "Add Topic";
-                            }
-                            <img src="~/images/edit.png" alt="Add Icon" /> @topicName
+                            <img src="~/images/edit.png" alt="Add Icon" /> Add new Topic
                         </button>
                     </a>
                 </div>

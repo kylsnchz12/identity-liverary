@@ -4,37 +4,50 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+@section styles {
+    <link rel="stylesheet" href="~/css/training.css" />
+}
 
-<h4>Topic - @ViewBag.TrainingTitle</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="TrainingID" class="control-label"></label>
-                <input asp-for="TrainingID" class ="form-control" value="@ViewBag.TrainingID" readonly/>
+<div class="main-container">
+    <form form asp-action="Create" class="form-container">
+        <div class="left-side">
+            <div>
+                <h1 class="new-training">Create New Topic</h1>
+                <h2 style="color: white; background-color: #290968; border-radius: 5px; padding: 8px; width: auto;">For Training: @ViewBag.TrainingTitle</h2>
             </div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+            <br>
+            <div class="padding-left">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <!-- Training ID -->
+                <div>
+                    <label asp-for="TrainingID" class="control-label"></label>
+                    <input asp-for="TrainingID" class ="form-control" value="@ViewBag.TrainingID" readonly>
+                </div>
+
+                <!-- Title -->
+                <br>
+                <div>
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" style="width: 500px; background-color: #A175FA; text-align: center; border: none;" />
+                        <a href="/Topics/Index?trainingId=@ViewBag.TrainingID" class="btn btn-info" style="width: 500px; color: #A175FA; background-color: rgb(245, 239, 245); text-align: center; border: none; margin-top: 8px">View All Topic</a>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+        </div>
+        <div class="right-container">
+            <!-- Description -->
+            <div>
+                <label id="mylabel" asp-for="Description" class="control-label"></label>
+                <textarea id="description" class="form-control-new" rows="19" asp-for="Description" maxlength="1015"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
 </div>
 
 @section Scripts {

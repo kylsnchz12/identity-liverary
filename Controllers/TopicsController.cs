@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using liveraryIdentity.Data;
 using liveraryIdentity.Models;
+using liveraryIdentity.Data.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace liveraryIdentity.Controllers
 {
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class TopicsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -20,11 +23,13 @@ namespace liveraryIdentity.Controllers
         }
 
         // GET: Topics
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int trainingId)
         {
-            return _context.Topics != null ? 
-                        View(await _context.Topics.ToListAsync()) :
-                        Problem("Entity set 'ApplicationDbContext.Topics'  is null.");
+            var topics = await _context.Topics
+            .Where(topic => topic.TrainingID == trainingId)
+            .ToListAsync();
+
+            return View(topics);
         }
 
         // GET: Topics/Details/5
@@ -57,6 +62,7 @@ namespace liveraryIdentity.Controllers
             
             ViewBag.TrainingID = trainingId.Value;
             ViewBag.TrainingTitle = training.Title;
+
             return View();
         }
 
@@ -87,7 +93,7 @@ namespace liveraryIdentity.Controllers
 
             _context.Add(topic);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Training", "Home", new { id = addTopicRequest.TrainingID });
         }
 
         // GET: Topics/Edit/5

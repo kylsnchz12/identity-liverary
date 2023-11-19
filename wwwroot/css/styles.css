@@ -15,7 +15,7 @@
 }
 
 .search-bar {
-    width: 500px;
+    width: 550px;
     height: auto;
 }
 
@@ -37,7 +37,7 @@
     border-radius: 12px;
     padding: 8px;
     width: 380px;
-    margin-right: 500px;
+    margin-right: 490px;
 }
 
 .search-bar input {
@@ -767,4 +767,69 @@ a {
     color: #ffffff;
     padding: 12px;
     background-color: #290968;
+}
+
+.main-container1 {
+    display: flex;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-css {
+    background-color: #dfcfff7e;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thead-table {
+    color: #290968;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.thead-table th {
+    background-color: #dfcfffab;
+    padding: 12px;
+    border-top: 5px solid #290968;
+}
+
+.tbody-table {
+    padding: 12px;
+}
+
+.tbody-table td {
+    padding: 8px;
+}
+
+.tbody-table tr {
+    border-bottom: 2px solid #2909681a;
+}
+
+.prm-btn {
+    background-color: #290968;
+    border-radius: 3px;
+    padding: 8px;
+    width: 20px;
+    margin: 5px;
+    color: white;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+.prm-btn:hover {
+    background-color: #A175FA; 
+    color: #290968; 
 }

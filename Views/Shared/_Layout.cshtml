@@ -38,6 +38,7 @@
                     @if(!Context.Request.Path.StartsWithSegments("/Home/Category") &&
                         !Context.Request.Path.StartsWithSegments("/Home/Training") &&
                         !Context.Request.Path.StartsWithSegments("/Trainings") &&
+                        !Context.Request.Path.StartsWithSegments("/Topics") &&
                         !Context.Request.Path.StartsWithSegments("/Categories") &&
                         !Context.Request.Path.StartsWithSegments("/AdminHome/TrainingAdmin"))
                     {
@@ -83,11 +84,12 @@
                                     <button type="submit" class="btn btn-purple">Logout @User.Identity.Name</button>
                                 </form>
                             }
-                        } else {
+                        } 
+                        @* else {
                             <a asp-area="" asp-controller="Account" asp-action="Login">
                                 Login
                             </a>
-                        }
+                        } *@
                     </div>
                 </div>
             </nav>
