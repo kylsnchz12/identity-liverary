@@ -18,10 +18,8 @@
 
 
                     <label id="mylabel" asp-for="TopicID">TopicID</label>
-                    <div class="custom-select">
-                        <select class="form-control" asp-for="TopicID" asp-items="ViewBag.TrainingID">
-                        </select>
-                    </div>
+                    <input asp-for="TopicID" class ="form-control" value="@ViewBag.TopicID" readonly>
+                    <h3>Creating new resource for topic: @ViewBag.TopicTitle</h3>
                 </div>
                 <br />
                 <div class="form-group">

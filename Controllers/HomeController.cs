@@ -14,15 +14,18 @@ public class HomeController : Controller
     private readonly ICategoryRepository _categoryRepository;
     private readonly ITopicRepository _topicRepository;
 
+    private readonly IResourceRepository _resourceRepository;
+
     private readonly ApplicationDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger, ITrainingRepository trainingRepository, ICategoryRepository categoryRepository, ITopicRepository topicRepository, ApplicationDbContext context)
+    public HomeController(ILogger<HomeController> logger, ITrainingRepository trainingRepository, ICategoryRepository categoryRepository, ITopicRepository topicRepository, IResourceRepository resourceRepository, ApplicationDbContext context)
     {
         _logger = logger;
         _trainingRepository = trainingRepository;
         _categoryRepository = categoryRepository;
         _topicRepository = topicRepository;
         _context = context;
+        _resourceRepository = resourceRepository;
     }
 
     [HttpGet]
@@ -70,6 +73,7 @@ public class HomeController : Controller
         var training = _trainingRepository.GetTrainingById(id);
         var categories = _categoryRepository.Categories;
         var topics = _topicRepository.GetAllTopics();
+        var resource = _resourceRepository.GetAllResources();
 
         if (training == null){
             return NotFound();
@@ -79,7 +83,8 @@ public class HomeController : Controller
         {
             Training = training,
             Categories = categories,
-            Topics = topics
+            Topics = topics,
+            Resources = resource
         };
 
         return View(viewModel);

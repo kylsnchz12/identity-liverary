@@ -22,11 +22,13 @@ namespace liveraryIdentity.Controllers
         }
 
         // GET: Resources
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int topicId)
         {
-              return _context.Resources != null ? 
-                          View(await _context.Resources.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Resources'  is null.");
+            var resource = await _context.Resources
+            .Where(resource => resource.TopicID == topicId)
+            .ToListAsync();
+
+            return View(resource);
         }
 
         // GET: Resources/Details/5
@@ -48,24 +50,49 @@ namespace liveraryIdentity.Controllers
         }
 
         // GET: Resources/Create
-        public IActionResult Create()
+        public IActionResult Create(int? topicId)
         {
+            if (!topicId.HasValue)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var topic = _context.Topics.FirstOrDefault(t => t.ID == topicId.Value);
+
+            ViewBag.TopicTitle = topic.Title;
+            ViewBag.TopicID = topicId;
             return View();
         }
 
         // POST: Resources/Create
+        // [HttpPost]
+        // [ValidateAntiForgeryToken]
+        // public async Task<IActionResult> Create([Bind("ID,TopicID,FilePath")] Resource resource)
+        // {
+        //     if (ModelState.IsValid)
+        //     {
+        //         _context.Add(resource);
+        //         await _context.SaveChangesAsync();
+        //         return RedirectToAction(nameof(Index));
+        //     }
+        //     return View(resource);
+        // }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,TopicID,FilePath")] Resource resource)
-        {
-            if (ModelState.IsValid)
+        public async Task<IActionResult> Create(AddResourceViewModel addResourceRequest)
+        {   
+            var resource = new Resource()
             {
-                _context.Add(resource);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(resource);
+                FilePath = addResourceRequest.FilePath,
+                TopicID = addResourceRequest.TopicID
+            };
+
+            _context.Add(resource);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index", new { id = addResourceRequest.TopicID });
         }
+
 
         // GET: Resources/Edit/5
         public async Task<IActionResult> Edit(int? id)

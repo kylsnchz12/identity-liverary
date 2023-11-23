@@ -13,8 +13,6 @@ namespace liveraryIdentity.Data.Repositories
             _context = context;
         }
 
-        public IEnumerable<Topic> Topics => _context.Topics.ToList();
-
         public List<Topic> GetAllTopics()
         {
             return _context.Topics.ToList();

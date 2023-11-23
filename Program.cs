@@ -21,6 +21,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<ITrainingRepository, TrainingRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddTransient<ITopicRepository, TopicRepository>();
+builder.Services.AddTransient<IResourceRepository, ResourceRepository>();
 
 var app = builder.Build();
 
