@@ -14,12 +14,13 @@
         <div class="col-md-10">
             <form asp-action="Create">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" name="TrainingID" value="@ViewBag.TrainingID" />
                 <div class="form-group">
-
-
-                    <label id="mylabel" asp-for="TopicID">TopicID</label>
-                    <input asp-for="TopicID" class ="form-control" value="@ViewBag.TopicID" readonly>
-                    <h3>Creating new resource for topic: @ViewBag.TopicTitle</h3>
+                    @* <label id="mylabel" asp-for="TopicID"></label> *@
+                    <input asp-for="TopicID" class ="form-control" value="@ViewBag.TopicID" type="hidden">
+                
+                    <h1 class="new-training">Add New Resource</h1>
+                    <h2 style="color: white; background-color: #290968; border-radius: 5px; padding: 8px; width: 500px;">For Topic: @ViewBag.TopicTitle</h2>
                 </div>
                 <br />
                 <div class="form-group">

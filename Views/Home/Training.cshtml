@@ -72,9 +72,14 @@
                         </p>
                         @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
                         {
-                            <a href="/Resources/Create?topicId=@Model.Topics[i].ID ">
+                            <a href="/Resources/Index?topicId=@Model.Topics[i].ID">
                                 <button class="edit-button-header"> 
                                     <img src="~/images/edit.png" alt="Edit Icon" /> Edit Resources
+                                </button>
+                            </a>
+                            <a href="/Resources/Create?topicId=@Model.Topics[i].ID&trainingId=@Model.Training.ID">
+                                <button class="edit-button-header"> 
+                                    <img src="~/images/add.png" alt="Add Icon" /> Add Resources
                                 </button>
                             </a>
                         }

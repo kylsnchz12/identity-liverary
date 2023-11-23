@@ -5,6 +5,8 @@ namespace liveraryIdentity.Models
         public string FilePath { get; set; }
 
         public int TopicID { get; set; }
+
+        public int TrainingId { get; set; }
         
     }
 }

@@ -50,7 +50,7 @@ namespace liveraryIdentity.Controllers
         }
 
         // GET: Resources/Create
-        public IActionResult Create(int? topicId)
+        public IActionResult Create(int? topicId, int? trainingId)
         {
             if (!topicId.HasValue)
             {
@@ -61,6 +61,7 @@ namespace liveraryIdentity.Controllers
 
             ViewBag.TopicTitle = topic.Title;
             ViewBag.TopicID = topicId;
+            ViewBag.TrainingID = trainingId;
             return View();
         }
 
@@ -90,7 +91,7 @@ namespace liveraryIdentity.Controllers
 
             _context.Add(resource);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index", new { id = addResourceRequest.TopicID });
+            return RedirectToAction("Training", "Home", new { id = addResourceRequest.TrainingId });
         }
 
 
@@ -110,38 +111,55 @@ namespace liveraryIdentity.Controllers
             return View(resource);
         }
 
-        // POST: Resources/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,TopicID,FilePath")] Resource resource)
+        public async Task<IActionResult> Edit(Resource resourceRequest)
         {
-            if (id != resource.ID)
-            {
-                return NotFound();
-            }
+            var resource = await _context.Resources.FindAsync(resourceRequest.ID);
 
-            if (ModelState.IsValid)
+            if(resource != null)
             {
-                try
-                {
-                    _context.Update(resource);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ResourceExists(resource.ID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                resource.TopicID = resourceRequest.TopicID;
+                resource.FilePath = resourceRequest.FilePath;
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index), new { id = resourceRequest.TopicID });
             }
-            return View(resource);
+            return RedirectToAction(nameof(Index), new { id = resourceRequest.TopicID }); 
         }
+
+        // POST: Resources/Edit/5
+        // [HttpPost]
+        // [ValidateAntiForgeryToken]
+        // public async Task<IActionResult> Edit(int id, [Bind("ID,TopicID,FilePath")] Resource resource)
+        // {
+        //     if (id != resource.ID)
+        //     {
+        //         return NotFound();
+        //     }
+
+        //     if (ModelState.IsValid)
+        //     {
+        //         try
+        //         {
+        //             _context.Update(resource);
+        //             await _context.SaveChangesAsync();
+        //         }
+        //         catch (DbUpdateConcurrencyException)
+        //         {
+        //             if (!ResourceExists(resource.ID))
+        //             {
+        //                 return NotFound();
+        //             }
+        //             else
+        //             {
+        //                 throw;
+        //             }
+        //         }
+        //         return RedirectToAction(nameof(Index));
+        //     }
+        //     return View(resource);
+        // }
 
         // GET: Resources/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -164,20 +182,20 @@ namespace liveraryIdentity.Controllers
         // POST: Resources/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int _id)
         {
             if (_context.Resources == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Resources'  is null.");
             }
-            var resource = await _context.Resources.FindAsync(id);
+            var resource = await _context.Resources.FindAsync(_id);
             if (resource != null)
             {
                 _context.Resources.Remove(resource);
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index), new { id = _id });
         }
 
         private bool ResourceExists(int id)
