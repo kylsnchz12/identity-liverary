@@ -4,32 +4,33 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FilePath)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FilePath)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="margin-page1">
+    <h1 style="color: white; border-radius: 8px; width: 100%; background-color: #290968; padding: 12px;">
+        Resources List
+    </h1>
+    <table class="table-css">
+        <thead class="thead-table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FilePath)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="tbody-table">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FilePath)
+                    </td>
+                    <td>
+                        <a class="prm-btn" asp-action="Edit" asp-route-id="@item.ID" style="margin: 5px; width: 90px">Edit</a>
+                        <a class="prm-btn" asp-action="Details" asp-route-id="@item.ID" style="margin: 5px; width: 90px">Details</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ID"style="margin: 5px; width: 90px">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

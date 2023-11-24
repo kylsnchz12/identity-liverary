@@ -200,7 +200,7 @@ namespace liveraryIdentity.Controllers
 
         private bool ResourceExists(int id)
         {
-          return (_context.Resources?.Any(e => e.ID == id)).GetValueOrDefault();
+            return (_context.Resources?.Any(e => e.ID == id)).GetValueOrDefault();
         }
     }
 }
