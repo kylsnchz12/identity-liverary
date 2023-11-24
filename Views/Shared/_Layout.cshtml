@@ -41,11 +41,12 @@
                         !Context.Request.Path.StartsWithSegments("/Topics") &&
                         !Context.Request.Path.StartsWithSegments("/Categories") &&
                         !Context.Request.Path.StartsWithSegments("/AdminHome/TrainingAdmin"))
+                    @using (Html.BeginForm("Index", "Search", FormMethod.Get))
                     {
                         <div class="search-bar">
                             <div class="input-container">
                                 <input type="text" placeholder="Search" />
-                                <button type="submit">
+                                    <button type="submit" value="Search">
                                     <img src="~/images/search.png" alt="Search" />
                                 </button>
                             </div>

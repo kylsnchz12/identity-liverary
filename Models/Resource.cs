@@ -4,6 +4,6 @@
     {
         public int ID { get; set; }
         public int TopicID { get; set; }
-        public string FilePath { get; set; }
+        public string? FilePath { get; set; }
     }
 }
