@@ -123,9 +123,9 @@ namespace liveraryIdentity.Controllers
                 resource.FilePath = resourceRequest.FilePath;
 
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index), new { id = resourceRequest.TopicID });
+                return RedirectToAction(nameof(Index), new { topicId = resourceRequest.TopicID });
             }
-            return RedirectToAction(nameof(Index), new { id = resourceRequest.TopicID }); 
+            return RedirectToAction(nameof(Index), new { topicId = resourceRequest.TopicID }); 
         }
 
         // POST: Resources/Edit/5

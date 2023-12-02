@@ -4,36 +4,56 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Resource</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ID" />
-            <div class="form-group">
-                <label asp-for="TopicID" class="control-label"></label>
-                <select asp-for="TopicID" class="form-control" asp-items="ViewBag.TopicID"></select>
-                <span asp-validation-for="TopicID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FilePath" class="control-label"></label>
-                <input asp-for="FilePath" class="form-control" />
-                <span asp-validation-for="FilePath" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="main-container1">
+    <div class="center-content">
+        <br />
+        <div class="col-md-10">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="ID" />
+                <input type="hidden" asp-for="TopicID" />
+                <div>
+                    <h1 class="new-training">Edit Resource</h1>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FilePath" class="control-label"></label>
+                    <input type="text" id="filePathDisplay" class="form-control" readonly style="width: 500px; background-color: #c0a1fda8; color: #1a093c; border: none;" />
+                    <input type="hidden" id="hiddenFilePath" asp-for="FilePath" />
+                    <span asp-validation-for="FilePath" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <!-- File input field -->
+                    <input type="file" id="fileInput" class="form-control" style="width: 500px;"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" style="width: 500px; background-color: #A175FA; text-align: center; border: none;" />
+                    <div style="margin-top: 12px;">
+                        <a href="/Resources/Index?topicId=@Model.TopicID" class="btn btn-primary" style="width: 500px; color: #A175FA; background-color: rgb(245, 239, 245); text-align: center; border: none;">Back to List</a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a href="/Resources/Index?topicId=@Model.TopicID">Back to List</a>
-</div>
+<script>
+    // Get the current value of FilePath and display it
+    const filePathInput = document.getElementById('hiddenFilePath');
+    const filePathDisplay = document.getElementById('filePathDisplay');
+    filePathDisplay.value = filePathInput.value;
 
+    // Add event listener to the file input field
+    document.getElementById('fileInput').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            // Update the value of the hidden FilePath input field and display
+            filePathInput.value = file.name;
+            filePathDisplay.value = file.name;
+        }
+    });
+</script>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
