@@ -16,5 +16,7 @@ namespace liveraryIdentity.Data.Repositories
         public IEnumerable<Training> Trainings => _context.Trainings.ToList();
 
         public Training GetTrainingById(int trainingId) => _context.Trainings.FirstOrDefault(p => p.ID == trainingId);
+
+        public IEnumerable<Training> GetTrainingsByTitle(string searchTerm) => _context.Trainings.Where(t => t.Title.Contains(searchTerm)).ToList();
     }
 }

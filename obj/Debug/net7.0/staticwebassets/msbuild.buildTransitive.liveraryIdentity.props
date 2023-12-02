@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\buildMultiTargeting\liveraryIdentity.props" />
+  <Import Project="../buildMultiTargeting/liveraryIdentity.props" />
 </Project>

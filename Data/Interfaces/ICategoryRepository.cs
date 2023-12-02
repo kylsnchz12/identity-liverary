@@ -7,4 +7,5 @@ public interface ICategoryRepository
 
     Category? GetCategoryById(int trainingId);
 
+    IEnumerable<Category> GetCategoriesByTitle(string searchTerm);
 }

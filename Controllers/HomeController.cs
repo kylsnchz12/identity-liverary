@@ -44,6 +44,22 @@ public class HomeController : Controller
         return View(viewModel);
     }
 
+    [HttpGet]
+    public IActionResult Search(string searchTerm)
+    {
+        var trainings = _trainingRepository.GetTrainingsByTitle(searchTerm);
+        var categories = _categoryRepository.GetCategoriesByTitle(searchTerm);
+        
+        var viewModel = new HomeViewModel
+        {
+            Trainings = trainings,
+            Categories = categories
+        };
+        
+        return View(viewModel);
+    }
+
+
     public IActionResult Privacy()
     {
         return View();
