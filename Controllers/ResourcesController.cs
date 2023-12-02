@@ -182,20 +182,20 @@ namespace liveraryIdentity.Controllers
         // POST: Resources/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int _id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Resources == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Resources'  is null.");
             }
-            var resource = await _context.Resources.FindAsync(_id);
+            var resource = await _context.Resources.FindAsync(id);
             if (resource != null)
             {
                 _context.Resources.Remove(resource);
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index), new { id = _id });
+            return RedirectToAction(nameof(Index), new { topicId = resource.TopicID });
         }
 
         private bool ResourceExists(int id)
