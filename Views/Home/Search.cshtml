@@ -12,6 +12,12 @@
         @* 1st Category Row *@
         <div class="scrollable-container">
             <div class="div-row">
+                @if(Model.Categories.Count() == 0)
+                {
+                    <div>
+                        <h3 style="font-size: 20px; font-weight: bold; background-color: #290968; width: min-content; border-radius: 5px; padding: 12px; color: white;">No Results</h3>
+                    </div>
+                }
                 @for (int i = 0; i < Math.Min(Model.Categories.Count(), 4); i++)
                 {
                     var category = Model.Categories.ElementAt(i);
@@ -46,6 +52,12 @@
         </div>
         @* 1st Training Cards Row *@
         <div class="scrollable-container2">
+            @if(Model.Trainings.Count() == 0)
+                {
+                    <div>
+                        <h3 style="font-size: 20px; font-weight: bold; background-color: #290968; width: min-content; border-radius: 5px; padding: 12px; color: white;">No Results</h3>
+                    </div>
+                }
             @for (int i = 0; i < Math.Min(Model.Trainings.Count(), 4); i++)
             {
                 var training = Model.Trainings.ElementAt(i);
@@ -54,16 +66,6 @@
                     <a href="/Home/Training/@training.ID">
                         <div class="training-div" style="background-image: url('/images/@Url.Content(training.Thumbnail)');">
                             <div class="upper-row">
-                                <div class="title-upper-right">
-                                    @if (category != null)
-                                    {
-                                        <p class="title-right">@category.Title</p>
-                                    }
-                                    else
-                                    {
-                                        <p class="title-right">Category Not Available</p>
-                                    }
-                                </div>
                                 <div class="text-bottom-left">
                                     <h2>@training.Title</h2>
                                     <p>@(training.Description.Length > 40 ? training.Description.Substring(0, 40) + "..." : training.Description)</p>
