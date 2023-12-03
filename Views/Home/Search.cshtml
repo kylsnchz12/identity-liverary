@@ -22,7 +22,7 @@
                 {
                     var category = Model.Categories.ElementAt(i);
                     <a href="/Home/Category/@category.ID">
-                        <div class="category-div" style="background-image: url('/images/@Url.Content(category.Thumbnail)');">
+                        <div class="category-div" style="background-image: url('/images/CategoriesBG/@Url.Content(category.Thumbnail)');">
                             <div class="text">@category.Title</div>
                         </div>
                     </a>
@@ -38,7 +38,7 @@
                     {
                         var category = Model.Categories.ElementAt(i);
                         <a href="/Home/Category/@category.ID">
-                            <div class="category-div" style="background-image: url('/images/@Url.Content(category.Thumbnail)');">
+                            <div class="category-div" style="background-image: url('/images/CategoriesBG/@Url.Content(category.Thumbnail)');">
                                 <div class="text">@category.Title</div>
                             </div>
                         </a>
@@ -64,7 +64,7 @@
                 var category = Model.Categories.FirstOrDefault(c => c.ID == training.CategoryID);
                 <div class="div-training-row">
                     <a href="/Home/Training/@training.ID">
-                        <div class="training-div" style="background-image: url('/images/@Url.Content(training.Thumbnail)');">
+                        <div class="training-div" style="background-image: url('/images/TrainingBG/@Url.Content(training.Thumbnail)');">
                             <div class="upper-row">
                                 <div class="text-bottom-left">
                                     <h2>@training.Title</h2>
@@ -86,7 +86,7 @@
                     var category = Model.Categories.FirstOrDefault(c => c.ID == training.CategoryID);
                     <div class="div-training-row">
                     <a href="/Home/Training/@training.ID">
-                        <div class="training-div" style="background-image: url('/images/@Url.Content(training.Thumbnail)');">
+                        <div class="training-div" style="background-image: url('/images/TrainingBG/@Url.Content(training.Thumbnail)');">
                             <div class="upper-row">
                                 <div class="title-upper-right">
                                     @if (category != null)

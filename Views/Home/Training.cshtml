@@ -11,7 +11,7 @@
     }
 }
 <body>
-    <div class="training-cover" style="background-image: url('/images/@Url.Content(Model.Training.Thumbnail)');">
+    <div class="training-cover" style="background-image: url('/images/TrainingBG/@Url.Content(Model.Training.Thumbnail)');">
         <div class="star-row">
             <div class="star" style="background-image: url('/images/star.png');"></div>
             <div class="star" style="background-image: url('/images/star.png');"></div>
@@ -24,7 +24,7 @@
     <div class="content-wrapper">
         <div class="category-details2">
             <h1>Category</h1>
-            <div class="category-div2" style="background-image: url('/images/@Url.Content(@selectedCategory.Thumbnail)');">
+            <div class="category-div2" style="background-image: url('/images/CategoriesBG/@Url.Content(@selectedCategory.Thumbnail)');">
                 <div class="text">@selectedCategory.Title</div>
             </div>
             <div class="left-details">
@@ -100,8 +100,12 @@
                                 {
                                     <div class="resource-button">
                                         <h1>@Model.Resources[j].FilePath</h1>
-                                        <img src="/images/view_icon.png" alt="view" class="button-image-view" />
-                                        <img src="/images/download_icon.png" alt="download" class="button-image-download" />
+                                        @* <a href="/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/Resources/@Model.Resources[j].FilePath" target="_blank">
+                                            <img src="/images/view_icon.png" alt="view" class="button-image-view" />
+                                        </a> *@
+                                        <a href="@Url.Action("DownloadFile", "Home", new { filePath = Model.Resources[j].FilePath })">
+                                            <img src="/images/download_icon.png" alt="download" class="button-image-download" />
+                                        </a>
                                     </div>
                                 }
                             }

@@ -106,6 +106,23 @@ public class HomeController : Controller
         return View(viewModel);
     }
 
+    public IActionResult DownloadFile(string filePath)
+    {
+        string permittedDirectory = "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/Resources/";
+        string fullPath = Path.Combine(permittedDirectory, filePath);
+
+        if (System.IO.File.Exists(fullPath))
+        {
+            byte[] fileBytes = System.IO.File.ReadAllBytes(fullPath);
+            return File(fileBytes, "application/pdf", filePath);
+        }
+        else
+        {
+            return NotFound(); 
+        }
+    }
+
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

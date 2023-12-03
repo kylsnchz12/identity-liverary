@@ -5,7 +5,7 @@
 }
 
 <body>
-    <div class="category-cover" style="background-image: url('/images/@Url.Content(Model.Categories.Thumbnail)');">
+    <div class="category-cover" style="background-image: url('/images/CategoriesBG/@Url.Content(Model.Categories.Thumbnail)');">
         <div class="text-container">
             <h1>@Model.Categories.Title</h1>
             <p>
@@ -15,7 +15,7 @@
     </div>
     <div class="category-details">
         <h1>Category</h1>
-        <div class="category-div" style="background-image: url('/images/@Url.Content(Model.Categories.Thumbnail)');">
+        <div class="category-div" style="background-image: url('/images/CategoriesBG/@Url.Content(Model.Categories.Thumbnail)');">
             <div class="text">@Model.Categories.Title</div>
         </div>
     </div>
@@ -29,7 +29,7 @@
                 {
                     <div class="div-training-row">
                         <a href="/Home/Training/@training.ID">
-                            <div class="training-div" style="background-image: url('/images/@Url.Content(training.Thumbnail)');">
+                            <div class="training-div" style="background-image: url('/images/TrainingBG/@Url.Content(training.Thumbnail)');">
                                 <div class="upper-row">
                                     <div class="title-upper-right">
                                         <p class="title-right">@Model.Categories.Title</p>

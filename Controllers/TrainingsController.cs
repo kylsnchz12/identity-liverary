@@ -184,7 +184,6 @@ namespace liveraryIdentity.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
         private bool TrainingExists(int id)
         {
             return (_context.Trainings?.Any(e => e.ID == id)).GetValueOrDefault();

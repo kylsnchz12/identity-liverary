@@ -33,16 +33,96 @@
       "PackagePath": "staticwebassets/images/.DS_Store"
     },
     {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/CategoriesBG/aws_bg.png",
+      "PackagePath": "staticwebassets/images/CategoriesBG/aws_bg.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/CategoriesBG/cover.png",
+      "PackagePath": "staticwebassets/images/CategoriesBG/cover.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/CategoriesBG/google_bg.png",
+      "PackagePath": "staticwebassets/images/CategoriesBG/google_bg.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/CategoriesBG/js_bg.png",
+      "PackagePath": "staticwebassets/images/CategoriesBG/js_bg.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/CategoriesBG/ms_bg.png",
+      "PackagePath": "staticwebassets/images/CategoriesBG/ms_bg.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/CategoriesBG/oracle_bg.png",
+      "PackagePath": "staticwebassets/images/CategoriesBG/oracle_bg.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/CategoriesBG/python_bg.png",
+      "PackagePath": "staticwebassets/images/CategoriesBG/python_bg.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/CategoriesBG/training_bg.png",
+      "PackagePath": "staticwebassets/images/CategoriesBG/training_bg.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/Resources/Deep-Learning-with-Python-Second-Edition.pdf",
+      "PackagePath": "staticwebassets/images/Resources/Deep-Learning-with-Python-Second-Edition.pdf"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/Resources/Intellectual property1(copyright,plagiarism,trademark) grp4.pdf",
+      "PackagePath": "staticwebassets/images/Resources/Intellectual property1(copyright,plagiarism,trademark) grp4.pdf"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/Resources/John.pdf",
+      "PackagePath": "staticwebassets/images/Resources/John.pdf"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/Resources/SSRN-id3607282.pdf",
+      "PackagePath": "staticwebassets/images/Resources/SSRN-id3607282.pdf"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/Resources/unit3.pdf",
+      "PackagePath": "staticwebassets/images/Resources/unit3.pdf"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/Resources/unit3_merged.pdf",
+      "PackagePath": "staticwebassets/images/Resources/unit3_merged.pdf"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/TrainingBG/training1.png",
+      "PackagePath": "staticwebassets/images/TrainingBG/training1.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/TrainingBG/training2.png",
+      "PackagePath": "staticwebassets/images/TrainingBG/training2.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/TrainingBG/training3.png",
+      "PackagePath": "staticwebassets/images/TrainingBG/training3.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/TrainingBG/training4.png",
+      "PackagePath": "staticwebassets/images/TrainingBG/training4.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/TrainingBG/training5.png",
+      "PackagePath": "staticwebassets/images/TrainingBG/training5.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/TrainingBG/training6.png",
+      "PackagePath": "staticwebassets/images/TrainingBG/training6.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/TrainingBG/training7.png",
+      "PackagePath": "staticwebassets/images/TrainingBG/training7.png"
+    },
+    {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/TrainingBG/training8.png",
+      "PackagePath": "staticwebassets/images/TrainingBG/training8.png"
+    },
+    {
       "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/add.png",
       "PackagePath": "staticwebassets/images/add.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/aws_bg.png",
-      "PackagePath": "staticwebassets/images/aws_bg.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/cover.png",
-      "PackagePath": "staticwebassets/images/cover.png"
     },
     {
       "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/crud_logo.png",
@@ -61,16 +141,8 @@
       "PackagePath": "staticwebassets/images/edit_btn.png"
     },
     {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/google_bg.png",
-      "PackagePath": "staticwebassets/images/google_bg.png"
-    },
-    {
       "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/home.png",
       "PackagePath": "staticwebassets/images/home.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/js_bg.png",
-      "PackagePath": "staticwebassets/images/js_bg.png"
     },
     {
       "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/login_logo.png",
@@ -89,18 +161,6 @@
       "PackagePath": "staticwebassets/images/logoword.png"
     },
     {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/ms_bg.png",
-      "PackagePath": "staticwebassets/images/ms_bg.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/oracle_bg.png",
-      "PackagePath": "staticwebassets/images/oracle_bg.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/python_bg.png",
-      "PackagePath": "staticwebassets/images/python_bg.png"
-    },
-    {
       "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/search.png",
       "PackagePath": "staticwebassets/images/search.png"
     },
@@ -111,42 +171,6 @@
     {
       "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/superadmin.png",
       "PackagePath": "staticwebassets/images/superadmin.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/training1.png",
-      "PackagePath": "staticwebassets/images/training1.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/training2.png",
-      "PackagePath": "staticwebassets/images/training2.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/training3.png",
-      "PackagePath": "staticwebassets/images/training3.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/training4.png",
-      "PackagePath": "staticwebassets/images/training4.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/training5.png",
-      "PackagePath": "staticwebassets/images/training5.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/training6.png",
-      "PackagePath": "staticwebassets/images/training6.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/training7.png",
-      "PackagePath": "staticwebassets/images/training7.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/training8.png",
-      "PackagePath": "staticwebassets/images/training8.png"
-    },
-    {
-      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/training_bg.png",
-      "PackagePath": "staticwebassets/images/training_bg.png"
     },
     {
       "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/view_icon.png",
