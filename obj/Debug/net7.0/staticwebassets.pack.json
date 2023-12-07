@@ -141,6 +141,10 @@
       "PackagePath": "staticwebassets/images/edit_btn.png"
     },
     {
+      "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/empty-star.png",
+      "PackagePath": "staticwebassets/images/empty-star.png"
+    },
+    {
       "Id": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/home.png",
       "PackagePath": "staticwebassets/images/home.png"
     },

@@ -40,6 +40,7 @@
                         !Context.Request.Path.StartsWithSegments("/Trainings") &&
                         !Context.Request.Path.StartsWithSegments("/Topics") &&
                         !Context.Request.Path.StartsWithSegments("/Categories") &&
+                        !Context.Request.Path.StartsWithSegments("/Home/Rating") &&
                         !Context.Request.Path.StartsWithSegments("/AdminHome/TrainingAdmin"))
                     @using (Html.BeginForm("Index", "Search", FormMethod.Get))
                     { 

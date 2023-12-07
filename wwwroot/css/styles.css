@@ -834,3 +834,16 @@ a {
     background-color: #A175FA; 
     color: #290968; 
 }
+
+.rate-button {
+    background-color: #A175FA;
+    color: #4D1FA8;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    display: inline;
+}

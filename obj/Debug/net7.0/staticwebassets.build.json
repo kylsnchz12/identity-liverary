@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jlTm7yCkFrmSzFCEshWBokFBwdam5WMP3iUe0fyfKvo=",
+  "Hash": "Jy465Da0me+s4RYf7noYEh7UeEKh+iYuJ/syaaVNOc8=",
   "Source": "liveraryIdentity",
   "BasePath": "_content/liveraryIdentity",
   "Mode": "Default",
@@ -1409,6 +1409,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/edit.png"
+    },
+    {
+      "Identity": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/empty-star.png",
+      "SourceId": "liveraryIdentity",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/",
+      "BasePath": "_content/liveraryIdentity",
+      "RelativePath": "images/empty-star.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/empty-star.png"
     },
     {
       "Identity": "/Users/kyle/Desktop/GitHub/identity-liverary/wwwroot/images/home.png",

@@ -5,6 +5,7 @@
     Category selectedCategory = null;
     int isTopicNull = 0;
     int isResourceNull = 0;
+    int starRate = 3;
     for (int i = 0; i < Model.Categories.Count(); i++)
     {
         selectedCategory = Model.Categories.FirstOrDefault(c => c.ID == Model.Training.CategoryID);
@@ -13,9 +14,17 @@
 <body>
     <div class="training-cover" style="background-image: url('/images/TrainingBG/@Url.Content(Model.Training.Thumbnail)');">
         <div class="star-row">
-            <div class="star" style="background-image: url('/images/star.png');"></div>
-            <div class="star" style="background-image: url('/images/star.png');"></div>
-            <div class="star" style="background-image: url('/images/star.png');"></div>
+            @for(int i=0; i < 3; i++)
+            {
+                <span class="star" style="background-image: url('/images/star.png');"></span>
+            }
+            @for(int i = 0; i < 5-3; i++)
+            {
+                <span class="star" style="background-image: url('/images/empty-star.png');"></span>
+            }
+            <a href="/Home/Rating">
+                <div class="rate-button">Rate</div>
+            </a>
         </div>
         <div class="text-container">
             <h1>@Model.Training.Title</h1>

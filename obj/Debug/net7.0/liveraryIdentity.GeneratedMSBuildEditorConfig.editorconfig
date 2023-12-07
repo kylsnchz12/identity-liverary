@@ -224,6 +224,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/kyle/Desktop/GitHub/identity-liverary/Views/Home/Rating.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9SYXRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/kyle/Desktop/GitHub/identity-liverary/Views/Home/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

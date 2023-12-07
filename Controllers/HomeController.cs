@@ -65,6 +65,11 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Rating()
+    {
+        return View();
+    }
+
     [HttpGet]
     public IActionResult Category(int id)
     {
