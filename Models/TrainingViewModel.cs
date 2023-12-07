@@ -10,5 +10,7 @@ public class TrainingViewModel
     public List<Topic> Topics { get; set; }
 
     public List<Resource> Resources { get; set; }
+
+    public Rating Rating { get; set; }
     
 }

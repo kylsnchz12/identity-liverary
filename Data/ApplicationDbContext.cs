@@ -14,4 +14,5 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Training> Trainings { get; set; }
     public DbSet<Topic> Topics { get; set; }
     public DbSet<Resource> Resources { get; set; }
+    public DbSet<Rating> Ratings { get; set; }
 }
