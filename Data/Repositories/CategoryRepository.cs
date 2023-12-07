@@ -18,5 +18,6 @@ namespace liveraryIdentity.Data.Repositories
         public IEnumerable<Category> GetCategoriesByTitle(string searchTerm) => _context.Categories.Where(c => c.Title.Contains(searchTerm)).ToList();
 
         public Category GetCategoryById(int categoryId) => _context.Categories.FirstOrDefault(p => p.ID == categoryId);
+
     }
 }

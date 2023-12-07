@@ -13,7 +13,10 @@ namespace liveraryIdentity.Data.Repositories
             _context = context;
         }
 
-        public Rating GetRatingByTrainingId(int trainingId) => _context.Ratings.FirstOrDefault(p => p.TrainingID == trainingId);
+        public List<Rating> GetRatingByTrainingId(int trainingId)
+        {
+            return _context.Ratings.Where(r => r.TrainingID == trainingId).ToList();
+        }
 
     }
 }

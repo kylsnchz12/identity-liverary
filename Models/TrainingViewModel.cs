@@ -11,6 +11,6 @@ public class TrainingViewModel
 
     public List<Resource> Resources { get; set; }
 
-    public Rating Rating { get; set; }
+    public List<Rating> Ratings { get; set; }
     
 }

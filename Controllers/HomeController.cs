@@ -13,12 +13,13 @@ public class HomeController : Controller
     private readonly ITrainingRepository _trainingRepository;
     private readonly ICategoryRepository _categoryRepository;
     private readonly ITopicRepository _topicRepository;
+    private readonly IRatingRepository _ratingRepository;
 
     private readonly IResourceRepository _resourceRepository;
 
     private readonly ApplicationDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger, ITrainingRepository trainingRepository, ICategoryRepository categoryRepository, ITopicRepository topicRepository, IResourceRepository resourceRepository, ApplicationDbContext context)
+    public HomeController(ILogger<HomeController> logger, ITrainingRepository trainingRepository, ICategoryRepository categoryRepository, ITopicRepository topicRepository, IResourceRepository resourceRepository, IRatingRepository ratingRepository, ApplicationDbContext context)
     {
         _logger = logger;
         _trainingRepository = trainingRepository;
@@ -26,6 +27,7 @@ public class HomeController : Controller
         _topicRepository = topicRepository;
         _context = context;
         _resourceRepository = resourceRepository;
+        _ratingRepository = ratingRepository;
     }
 
     [HttpGet]
@@ -65,9 +67,29 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Rating()
+    public IActionResult Rating(int trainingId)
     {
+        ViewBag.TrainingID = trainingId;
         return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Rating(Rating addRatingRequest)
+    {
+        var rate = new Rating()
+        {
+            ID = addRatingRequest.ID,
+            TrainingID = addRatingRequest.TrainingID,
+            Rate = addRatingRequest.Rate,
+            Name = addRatingRequest.Name,
+            Email = addRatingRequest.Email,
+            Comment = addRatingRequest.Comment
+        };
+
+        _context.Add(rate);
+        await _context.SaveChangesAsync();
+        return RedirectToAction("Training", "Home", new { id = addRatingRequest.TrainingID });
     }
 
     [HttpGet]
@@ -95,6 +117,7 @@ public class HomeController : Controller
         var categories = _categoryRepository.Categories;
         var topics = _topicRepository.GetAllTopics();
         var resource = _resourceRepository.GetAllResources();
+        var rating = _ratingRepository.GetRatingByTrainingId(id);
 
         if (training == null){
             return NotFound();
@@ -105,7 +128,8 @@ public class HomeController : Controller
             Training = training,
             Categories = categories,
             Topics = topics,
-            Resources = resource
+            Resources = resource,
+            Ratings = rating
         };
 
         return View(viewModel);

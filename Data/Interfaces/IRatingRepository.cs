@@ -3,6 +3,6 @@ using liveraryIdentity.Models;
 
 public interface IRatingRepository
 {
-    Rating? GetRatingByTrainingId(int trainingId);
+    List<Rating> GetRatingByTrainingId(int trainingId);
 
 }

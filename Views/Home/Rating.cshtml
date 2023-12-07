@@ -1,3 +1,9 @@
+@model liveraryIdentity.Models.Rating
+
+@{
+    ViewData["Title"] = "Rating";
+}
+
 @section styles {
     <link rel="stylesheet" href="~/css/training.css" />
 }
@@ -36,7 +42,7 @@
 </script>
 
 <div class="main-container">
-    <form method="post" asp-action="Create" class="form-container">
+    <form method="post" asp-action="Rating" class="form-container">
         <div class="left-side">
             <div>
                 <h1 class="new-training">Rate a training</h1>
@@ -46,18 +52,22 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <!-- Name -->
                 <div>
-                    <label id="mylabel">Name</label>
-                    <input class="form-control-new">
-                    @* <span asp-validation-for="Title" class="text-danger"></span> *@
+                    <label id="mylabel" asp-for="Name">Name</label>
+                    <input class="form-control-new" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
 
                 <!-- Email -->
                 <br>
                 <div>
-                    <label id="mylabel">Email Address</label>
-                    <input class="form-control-new">
-                    <span class="text-danger"></span>
+                    <label id="mylabel" asp-for="Email">Email Address</label>
+                    <input class="form-control-new" asp-for="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
+
+                <!-- TrainingID -->
+                <input class="form-control-new" asp-for="TrainingID" type="hidden" value="@ViewBag.TrainingID">
+                
 
                 <!-- Stars -->
                 <br>
@@ -71,7 +81,7 @@
                         <span id="span5" onmouseout="CRateOut(5)" onmouseover="CRateOver(5)" onclick="CRateClick(5)" class="star" style="background-image: url('/images/empty-star.png');"></span>
                     </div>
                     <div>
-                        <input type="hidden" id="lbRating" />
+                        <input type="hidden" id="lbRating" asp-for="Rate"/>
                     </div>
                 </div>
 
@@ -84,9 +94,9 @@
         <div class="right-container">
             <!-- Comments -->
             <div>
-                <label id="mylabel">Comments</label>
-                <textarea id="description" class="form-control-new" rows="19" maxlength="1015"></textarea>
-                <span class="text-danger"></span>
+                <label id="mylabel" asp-for="Comment">Comments</label>
+                <textarea id="description" class="form-control-new" rows="19" maxlength="1015" asp-for="Comment"></textarea>
+                <span class="text-danger" asp-validation-for="Comment"></span>
             </div>
         </div>
     </form>
