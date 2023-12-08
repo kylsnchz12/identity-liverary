@@ -3,12 +3,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @RenderSection("styles", required: false)
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - liveraryIdentity</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/liveraryIdentity.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="~/css/styles.css" />
 </head>
 <body>
@@ -22,29 +24,50 @@
             <nav>
                 <div class="header-content">
                     <div class="logo">
-                        <a asp-area="" asp-controller="Home" asp-action="Index">
-                            <img src="~/images/logo.png" alt="Logo" width="254" height="72" />
-                        </a>
+                        @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                        {
+                            <a asp-area="" asp-controller="AdminHome" asp-action="Index">
+                                <img src="~/images/logo.png" alt="Logo" width="254" height="72" />
+                            </a>
+                        } else {
+                            <a asp-area="" asp-controller="Home" asp-action="Index">
+                                <img src="~/images/logo.png" alt="Logo" width="254" height="72" />
+                            </a>
+                        }
                     </div>
-                    <div class="search-bar">
-                        <div class="input-container">
-                            <input type="text" placeholder="Search" />
-                            <button type="submit">
-                                <img src="~/images/search.png" alt="Search" />
-                            </button>
-                        </div>
-                    </div>
+                    @if(!Context.Request.Path.StartsWithSegments("/Home/Category") &&
+                        !Context.Request.Path.StartsWithSegments("/Home/Training") &&
+                        !Context.Request.Path.StartsWithSegments("/Trainings") &&
+                        !Context.Request.Path.StartsWithSegments("/Topics") &&
+                        !Context.Request.Path.StartsWithSegments("/Categories") &&
+                        !Context.Request.Path.StartsWithSegments("/Home/Rating") &&
+                        !Context.Request.Path.StartsWithSegments("/AdminHome/TrainingAdmin"))
+                    @using (Html.BeginForm("Index", "Search", FormMethod.Get))
+                    { 
+                            <div class="search-bar">
+                                <div class="input-container">
+                                    <input type="text" id="searchTerm" placeholder="Search" />
+                                    <a href="#" id="searchButton">
+                                        <img src="~/images/search.png" alt="Search" />
+                                    </a>
+                                </div>
+                            </div>
+                    }
                     @if(User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
                     {
                         <div class="heading-container">
-                            <button class="edit-button-header">
-                                <img src="~/images/add.png" alt="Add Icon" /> Create Training
-                            </button>
+                            <a asp-area="" asp-controller="Trainings" asp-action="Create">
+                                <button class="edit-button-header">
+                                    <img src="~/images/add.png" alt="Add Icon" /> Create Training
+                                </button>
+                            </a>
                         </div>
                         <div class="heading-container">
-                            <button class="edit-button-header">
-                                <img src="~/images/add.png" alt="Add Icon" /> Create Category
-                            </button>
+                            <a asp-area="" asp-controller="Categories" asp-action="Create">
+                                <button class="edit-button-header">
+                                    <img src="~/images/add.png" alt="Add Icon" /> Create Category
+                                </button>
+                            </a>
                         </div>
                     }
                     <div id="login">
@@ -63,11 +86,12 @@
                                     <button type="submit" class="btn btn-purple">Logout @User.Identity.Name</button>
                                 </form>
                             }
-                        } else {
+                        } 
+                        @* else {
                             <a asp-area="" asp-controller="Account" asp-action="Login">
                                 Login
                             </a>
-                        }
+                        } *@
                     </div>
                 </div>
             </nav>
@@ -86,11 +110,45 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation/1.19.3/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        function displayFileName() {
+            var input = document.getElementById('coverImage');
+            var fileNameDisplay = document.getElementById('fileName');
+            var uploadIcon = document.getElementById('uploadIcon');
+
+            if (input.files.length > 0) {
+                fileNameDisplay.innerText = input.files[0].name;
+                fileNameDisplay.style.display = 'inline';
+                uploadIcon.style.display = 'none';
+            } else {
+                fileNameDisplay.style.display = 'none';
+                uploadIcon.style.display = 'inline';
+            }
+        }
+    </script>
+    <script>
+        // Function to handle search
+        function performSearch() {
+            var searchTerm = document.getElementById('searchTerm').value;
+            window.location.href = '/Home/Search?searchTerm=' + searchTerm;
+        }
+
+        // Trigger search when Enter key is pressed
+        document.getElementById('searchTerm').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault(); // Prevent form submission
+                performSearch(); // Call the search function
+            }
+        });
+
+        // Trigger search when the search button is clicked
+        document.getElementById('searchButton').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            performSearch(); // Call the search function
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -1,0 +1,69 @@
+﻿@model liveraryIdentity.Models.AddCategoryViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@section styles {
+    <link rel="stylesheet" href="~/css/training.css" />
+}
+
+<div class="main-container">
+    <form method="post" asp-action="Create" class="form-container">
+        <div class="left-side">
+            <div>
+                <h1 class="new-training">Create New Category</h1>
+            </div>
+            <br>
+            <div class="padding-left">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <!-- Title -->
+                <div>
+                    <label id="mylabel" asp-for="Title">Category Title</label>
+                    <input class="form-control-new" asp-for="Title">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <!-- Date Created -->
+                <br>
+                <div>
+                    <label id="mylabel" asp-for="DateCreated"></label>
+                    <input class="form-control-new" asp-for="DateCreated">
+                    <span asp-validation-for="DateCreated" class="text-danger"></span>
+                </div>
+
+                <!-- Thumbnail -->
+                <br>
+                <div>
+                    <label for="coverImage" id="mylabel" asp-for="Thumbnail"></label>
+                    <label class="file-upload-btn">
+                        <input asp-for="Thumbnail" type="file" id="coverImage" class="form-control-new" accept="image/*" onchange="displayFileName()">
+                        <i id="uploadIcon" class="fas fa-upload">
+                            <i style="font-size: medium; font-family: 'Poppins', sans-serif; font-weight: 200;">
+                                Upload photo
+                            </i>
+                        </i> 
+                        <p id="fileName" style="display:none; color: black"></p>
+                    </label>
+                    <span asp-validation-for="Thumbnail" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" style="width: 500px; background-color: #A175FA; text-align: center; border: none;" />
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <!-- Description -->
+            <div>
+                <label id="mylabel" asp-for="Description">Description</label>
+                <textarea id="description" class="form-control-new" rows="19" asp-for="Description" maxlength="1015"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

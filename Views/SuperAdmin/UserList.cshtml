@@ -8,6 +8,11 @@
                     <img src="~/images/home.png" alt="Home Icon" /> Home
                 </button>
             </a>
+            <a asp-area="" asp-controller="Account" asp-action="Create">
+                <button class="logout-add">
+                    <img src="~/images/add.png" alt="Home Icon" /> Create New Admin
+                </button>
+            </a>
             <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
                 @Html.AntiForgeryToken()
                 <button type="submit" class="logout">

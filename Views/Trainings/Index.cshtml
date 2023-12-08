@@ -1,0 +1,63 @@
+﻿@model IEnumerable<liveraryIdentity.Models.Training>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="margin-page1">
+    <h1 style="color: white; border-radius: 8px; width: 100%; background-color: #290968; padding: 12px;">
+        Trainings List
+    </h1>
+    <table class="table-css">
+        <thead class="thead-table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Author)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateCreated)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Thumbnail)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="tbody-table">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="font-weight: bold;">
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Author)
+                    </td>
+                    <td style="text-align: justify;">
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateCreated)
+                    </td>
+                    @* <td>
+                        @Html.DisplayFor(modelItem => item.Thumbnail)
+                    </td> *@
+                    <td>
+                        <img src="~/images/TrainingBG/@item.Thumbnail" alt="Thumbnail" style="max-width: 100px; max-height: 100px; border-radius: 5px" />
+                    </td>
+                    <td>
+                        <a class="prm-btn" asp-action="Edit" asp-route-id="@item.ID" style="margin: 5px; width: 90px">Edit</a>
+                        <a class="prm-btn" asp-action="Details" asp-route-id="@item.ID" style="margin: 5px; width: 90px">Details</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ID"style="margin: 5px; width: 90px">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

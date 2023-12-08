@@ -16,7 +16,7 @@ namespace liveraryIdentity.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.11")
+                .HasAnnotation("ProductVersion", "7.0.12")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -215,6 +215,136 @@ namespace liveraryIdentity.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("liveraryIdentity.Models.Category", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Thumbnail")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("liveraryIdentity.Models.Rating", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Rate")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrainingID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Ratings");
+                });
+
+            modelBuilder.Entity("liveraryIdentity.Models.Resource", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("FilePath")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("TopicID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("TopicID");
+
+                    b.ToTable("Resources");
+                });
+
+            modelBuilder.Entity("liveraryIdentity.Models.Topic", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("TrainingID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("TrainingID");
+
+                    b.ToTable("Topics");
+                });
+
+            modelBuilder.Entity("liveraryIdentity.Models.Training", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Author")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Thumbnail")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("Trainings");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -264,6 +394,48 @@ namespace liveraryIdentity.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("liveraryIdentity.Models.Resource", b =>
+                {
+                    b.HasOne("liveraryIdentity.Models.Topic", null)
+                        .WithMany("Resources")
+                        .HasForeignKey("TopicID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("liveraryIdentity.Models.Topic", b =>
+                {
+                    b.HasOne("liveraryIdentity.Models.Training", null)
+                        .WithMany("Topics")
+                        .HasForeignKey("TrainingID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("liveraryIdentity.Models.Training", b =>
+                {
+                    b.HasOne("liveraryIdentity.Models.Category", null)
+                        .WithMany("Trainings")
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("liveraryIdentity.Models.Category", b =>
+                {
+                    b.Navigation("Trainings");
+                });
+
+            modelBuilder.Entity("liveraryIdentity.Models.Topic", b =>
+                {
+                    b.Navigation("Resources");
+                });
+
+            modelBuilder.Entity("liveraryIdentity.Models.Training", b =>
+                {
+                    b.Navigation("Topics");
                 });
 #pragma warning restore 612, 618
         }

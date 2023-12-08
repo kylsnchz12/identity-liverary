@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using liveraryIdentity.Data;
 
+using liveraryIdentity.Data.Interfaces;
+using liveraryIdentity.Data.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -14,6 +17,12 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddTransient<ITrainingRepository, TrainingRepository>();
+builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+builder.Services.AddTransient<ITopicRepository, TopicRepository>();
+builder.Services.AddTransient<IResourceRepository, ResourceRepository>();
+builder.Services.AddTransient<IRatingRepository, RatingRepository>();
 
 var app = builder.Build();
 
